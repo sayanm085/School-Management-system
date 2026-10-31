@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Next.js build output and dev caches
+.next/
+out/
+
+# Build outputs and caches
+build/
+dist/
+coverage/
+.turbo/
+*.tsbuildinfo
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+apps/*/android/.gradle/
+apps/*/android/local.properties
+apps/*/android/key.properties
+apps/*/ios/Pods/
+
+# Packaged artifacts (built APKs live outside the repo)
+*.apk
+*.aab
+*.ipa
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor noise
+.DS_Store
+Thumbs.db

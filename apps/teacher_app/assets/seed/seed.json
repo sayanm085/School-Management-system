@@ -1,0 +1,2952 @@
+{
+  "school": {
+    "id": "school-nuv",
+    "nameBn": "নবগ্রাম উচ্চ বিদ্যালয় (ডেমো)",
+    "nameEn": "Nabagram Uchcha Vidyalaya (Demo)",
+    "code": "WB-NAB-001",
+    "udise": "19000000001",
+    "type": "Government-sponsored co-educational secondary school",
+    "address": "Nabagram, Purba Bardhaman",
+    "district": "Purba Bardhaman",
+    "established": 1948,
+    "phone": "03452 255 014",
+    "email": "office@nabagram-demo.example"
+  },
+  "academicYear": {
+    "id": "ay-2026-27",
+    "label": "2026–27",
+    "startDate": "2026-04-01",
+    "endDate": "2027-03-31",
+    "isActive": true
+  },
+  "teacher": {
+    "id": "staff-ananya",
+    "employeeId": "TCH-027",
+    "nameBn": "অনন্যা সেন",
+    "nameEn": "Ananya Sen",
+    "role": "teacher",
+    "designation": "Assistant Teacher · Physical Science",
+    "phone": "9830011027",
+    "email": "ananya.sen@nabagram-demo.example",
+    "avatar": "/avatars/student-26.svg",
+    "joinedAt": "2016-07-11",
+    "payLevel": "Level 11",
+    "status": "active",
+    "primarySubjectId": "psci",
+    "assignments": [
+      {
+        "type": "class_teacher",
+        "sectionId": "VIII-B"
+      },
+      {
+        "type": "subject_teacher",
+        "sectionId": "VIII-B",
+        "subjectId": "psci"
+      },
+      {
+        "type": "subject_teacher",
+        "sectionId": "IX-A",
+        "subjectId": "psci"
+      },
+      {
+        "type": "subject_teacher",
+        "sectionId": "IX-B",
+        "subjectId": "psci"
+      }
+    ]
+  },
+  "section": {
+    "id": "VIII-B",
+    "classLevel": "VIII",
+    "section": "B",
+    "room": "R-402",
+    "capacity": 50,
+    "classTeacherId": "staff-ananya"
+  },
+  "students": [
+    {
+      "id": "stu-0277",
+      "admissionNo": "NUV-2020-0277",
+      "rollNo": "01",
+      "sectionId": "VIII-B",
+      "nameBn": "সুস্মিতা লাহা",
+      "nameEn": "Susmita Laha",
+      "gender": "female",
+      "dob": "2013-05-17",
+      "guardianName": "অমৃত Laha",
+      "guardianPhone": "9837241113",
+      "address": "House 76, Shibtala, Nabagram, Purba Bardhaman",
+      "category": "st",
+      "status": "active",
+      "avatar": "/avatars/student-21.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 137362,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": false
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PLPPPH",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0278",
+      "admissionNo": "NUV-2020-0278",
+      "rollNo": "02",
+      "sectionId": "VIII-B",
+      "nameBn": "রাহুল আচার্য",
+      "nameEn": "Rahul Acharya",
+      "gender": "male",
+      "dob": "2013-10-05",
+      "guardianName": "প্রীতম Acharya",
+      "guardianPhone": "9883786581",
+      "address": "House 94, Kalitala, Nabagram, Purba Bardhaman",
+      "category": "obc",
+      "status": "active",
+      "avatar": "/avatars/student-22.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 522577,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPAP",
+        "PPAPPP",
+        "PPPPLP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PHPPPP",
+        "PPPPPP",
+        "PPPPAP",
+        "PPPPPP",
+        "APPPP-"
+      ]
+    },
+    {
+      "id": "stu-0279",
+      "admissionNo": "NUV-2020-0279",
+      "rollNo": "03",
+      "sectionId": "VIII-B",
+      "nameBn": "তন্ময় লাহা",
+      "nameEn": "Tanmoy Laha",
+      "gender": "male",
+      "dob": "2013-03-22",
+      "guardianName": "নীলাদ্রি Laha",
+      "guardianPhone": "9836700517",
+      "address": "House 112, Nabagram Station Road, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-23.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 916076,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "APPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPAP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0280",
+      "admissionNo": "NUV-2020-0280",
+      "rollNo": "04",
+      "sectionId": "VIII-B",
+      "nameBn": "রাজেশ গোস্বামী",
+      "nameEn": "Rajesh Goswami",
+      "gender": "male",
+      "dob": "2013-02-20",
+      "guardianName": "রাহুল Goswami",
+      "guardianPhone": "9889010780",
+      "address": "House 21, Shibtala, Nabagram, Purba Bardhaman",
+      "category": "sc",
+      "status": "active",
+      "avatar": "/avatars/student-24.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 969500,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPHPPA",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPAPP",
+        "PHPPPP",
+        "PPPPPP",
+        "PPPAPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0281",
+      "admissionNo": "NUV-2020-0281",
+      "rollNo": "05",
+      "sectionId": "VIII-B",
+      "nameBn": "সৌম্যা শীল",
+      "nameEn": "Soumya Shil",
+      "gender": "female",
+      "dob": "2013-12-11",
+      "guardianName": "প্রীতম Shil",
+      "guardianPhone": "9812441210",
+      "address": "House 40, Paschim Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-25.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 568617,
+      "attendanceRisk": "low",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "APPPAP",
+        "PPPPPA",
+        "PPPPPP",
+        "PPPPPP",
+        "PAPHPP",
+        "PHPPPP",
+        "APPPPP",
+        "PPPPAA",
+        "PAPPPP",
+        "PAPAPL",
+        "PAPPA-"
+      ]
+    },
+    {
+      "id": "stu-0282",
+      "admissionNo": "NUV-2020-0282",
+      "rollNo": "06",
+      "sectionId": "VIII-B",
+      "nameBn": "অনন্যা বেরা",
+      "nameEn": "Ananya Bera",
+      "gender": "female",
+      "dob": "2013-06-03",
+      "guardianName": "বিক্রম Bera",
+      "guardianPhone": "9817218641",
+      "address": "House 22, Nabagram Station Road, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-26.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 145065,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPLPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPL",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0283",
+      "admissionNo": "NUV-2020-0283",
+      "rollNo": "07",
+      "sectionId": "VIII-B",
+      "nameBn": "সুব্রত চক্রবর্তী",
+      "nameEn": "Subrata Chakraborty",
+      "gender": "male",
+      "dob": "2013-07-25",
+      "guardianName": "সৌম্যদীপ Chakraborty",
+      "guardianPhone": "9870144074",
+      "address": "House 106, Dakshin Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-27.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 923845,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPAPPP",
+        "PPPPPP",
+        "PPPLPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0284",
+      "admissionNo": "NUV-2020-0284",
+      "rollNo": "08",
+      "sectionId": "VIII-B",
+      "nameBn": "প্রিয়াঙ্কা নাগ",
+      "nameEn": "Priyanka Nag",
+      "gender": "female",
+      "dob": "2013-01-26",
+      "guardianName": "দেবজিৎ Nag",
+      "guardianPhone": "9865730924",
+      "address": "House 42, Dakshin Para, Nabagram, Purba Bardhaman",
+      "category": "obc",
+      "status": "active",
+      "avatar": "/avatars/student-28.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 616912,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPAPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPAP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PAPPPL",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0285",
+      "admissionNo": "NUV-2020-0285",
+      "rollNo": "09",
+      "sectionId": "VIII-B",
+      "nameBn": "অর্পিতা চট্টোপাধ্যায়",
+      "nameEn": "Arpita Chatterjee",
+      "gender": "female",
+      "dob": "2013-05-14",
+      "guardianName": "তন্ময় Chatterjee",
+      "guardianPhone": "9849360300",
+      "address": "House 33, School Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-29.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 465854,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPAP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PAPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0286",
+      "admissionNo": "NUV-2020-0286",
+      "rollNo": "10",
+      "sectionId": "VIII-B",
+      "nameBn": "তিথি মুখার্জী",
+      "nameEn": "Tithi Mukherjee",
+      "gender": "female",
+      "dob": "2013-12-02",
+      "guardianName": "ভাস্কর Mukherjee",
+      "guardianPhone": "9888586841",
+      "address": "House 82, Natun Pally, Nabagram, Purba Bardhaman",
+      "category": "sc",
+      "status": "active",
+      "avatar": "/avatars/student-30.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 795435,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "LPPPPP",
+        "PPPPPP",
+        "HPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0287",
+      "admissionNo": "NUV-2020-0287",
+      "rollNo": "11",
+      "sectionId": "VIII-B",
+      "nameBn": "শুভ্র আচার্য",
+      "nameEn": "Shubhra Acharya",
+      "gender": "male",
+      "dob": "2013-01-17",
+      "guardianName": "অর্ঘ্য Acharya",
+      "guardianPhone": "9898017392",
+      "address": "House 93, Shibtala, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-31.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 105110,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PAPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPAPP",
+        "HPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0288",
+      "admissionNo": "NUV-2020-0288",
+      "rollNo": "12",
+      "sectionId": "VIII-B",
+      "nameBn": "সৌম্যদীপ ঘোষ",
+      "nameEn": "Soumyadeep Ghosh",
+      "gender": "male",
+      "dob": "2013-01-08",
+      "guardianName": "ভাস্কর Ghosh",
+      "guardianPhone": "9819796454",
+      "address": "House 77, School Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-32.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 162915,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPL",
+        "HPPPPP",
+        "PPPPAP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPLP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0289",
+      "admissionNo": "NUV-2020-0289",
+      "rollNo": "13",
+      "sectionId": "VIII-B",
+      "nameBn": "সৌম্যা হালদার",
+      "nameEn": "Soumya Haldar",
+      "gender": "female",
+      "dob": "2013-09-04",
+      "guardianName": "শুভম Haldar",
+      "guardianPhone": "9847535116",
+      "address": "House 48, Natun Pally, Nabagram, Purba Bardhaman",
+      "category": "obc",
+      "status": "active",
+      "avatar": "/avatars/student-01.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 895833,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": false
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPHP",
+        "PAPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PAPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0290",
+      "admissionNo": "NUV-2020-0290",
+      "rollNo": "14",
+      "sectionId": "VIII-B",
+      "nameBn": "অমৃত ঘোষ",
+      "nameEn": "Amrit Ghosh",
+      "gender": "male",
+      "dob": "2013-07-01",
+      "guardianName": "অনির্বাণ Ghosh",
+      "guardianPhone": "9839932499",
+      "address": "House 7, Kalitala, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-02.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 894546,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPHP",
+        "HPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPLPP",
+        "PPHPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0291",
+      "admissionNo": "NUV-2020-0291",
+      "rollNo": "15",
+      "sectionId": "VIII-B",
+      "nameBn": "সুমন বসু",
+      "nameEn": "Suman Basu",
+      "gender": "male",
+      "dob": "2013-10-20",
+      "guardianName": "কৌশিক Basu",
+      "guardianPhone": "9869480311",
+      "address": "House 78, Shibtala, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-03.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 25736,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PAPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPHPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0292",
+      "admissionNo": "NUV-2020-0292",
+      "rollNo": "16",
+      "sectionId": "VIII-B",
+      "nameBn": "প্রিয়াঙ্কা সাহা",
+      "nameEn": "Priyanka Saha",
+      "gender": "female",
+      "dob": "2013-10-01",
+      "guardianName": "বিক্রম Saha",
+      "guardianPhone": "9838160506",
+      "address": "House 78, Nabagram Station Road, Nabagram, Purba Bardhaman",
+      "category": "sc",
+      "status": "active",
+      "avatar": "/avatars/student-04.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 6393,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": false
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "APPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "LPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPA",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0293",
+      "admissionNo": "NUV-2020-0293",
+      "rollNo": "17",
+      "sectionId": "VIII-B",
+      "nameBn": "আকাশ খাঁ",
+      "nameEn": "Akash Khan",
+      "gender": "male",
+      "dob": "2013-10-01",
+      "guardianName": "তুহিন Khan",
+      "guardianPhone": "9860720945",
+      "address": "House 88, Shibtala, Nabagram, Purba Bardhaman",
+      "category": "sc",
+      "status": "active",
+      "avatar": "/avatars/student-05.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 835771,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPAPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPHP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0294",
+      "admissionNo": "NUV-2020-0294",
+      "rollNo": "18",
+      "sectionId": "VIII-B",
+      "nameBn": "প্রীতম চট্টোপাধ্যায়",
+      "nameEn": "Pritam Chatterjee",
+      "gender": "male",
+      "dob": "2013-10-18",
+      "guardianName": "তন্ময় Chatterjee",
+      "guardianPhone": "9821839720",
+      "address": "House 77, Purba Para, Nabagram, Purba Bardhaman",
+      "category": "obc",
+      "status": "active",
+      "avatar": "/avatars/student-06.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 441085,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": false
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPAP",
+        "PAPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "LPPPPP",
+        "PPLPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPHHP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0295",
+      "admissionNo": "NUV-2020-0295",
+      "rollNo": "19",
+      "sectionId": "VIII-B",
+      "nameBn": "সোহিনী পাল",
+      "nameEn": "Sohini Pal",
+      "gender": "female",
+      "dob": "2013-10-11",
+      "guardianName": "তন্ময় Pal",
+      "guardianPhone": "9879915865",
+      "address": "House 52, School Para, Nabagram, Purba Bardhaman",
+      "category": "sc",
+      "status": "active",
+      "avatar": "/avatars/student-07.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 138622,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPLP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PAPHP-"
+      ]
+    },
+    {
+      "id": "stu-0296",
+      "admissionNo": "NUV-2020-0296",
+      "rollNo": "20",
+      "sectionId": "VIII-B",
+      "nameBn": "সুমন দত্ত",
+      "nameEn": "Suman Dutta",
+      "gender": "male",
+      "dob": "2013-04-23",
+      "guardianName": "অমিতাভ Dutta",
+      "guardianPhone": "9844255740",
+      "address": "House 46, Natun Pally, Nabagram, Purba Bardhaman",
+      "category": "sc",
+      "status": "active",
+      "avatar": "/avatars/student-08.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 553633,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPHPP",
+        "PPPPPP",
+        "PPPPPA",
+        "PPPPPP",
+        "PPPPPP",
+        "PAAPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPA-"
+      ]
+    },
+    {
+      "id": "stu-0297",
+      "admissionNo": "NUV-2020-0297",
+      "rollNo": "21",
+      "sectionId": "VIII-B",
+      "nameBn": "দেবযানী হালদার",
+      "nameEn": "Debjani Haldar",
+      "gender": "female",
+      "dob": "2013-11-08",
+      "guardianName": "রূপম Haldar",
+      "guardianPhone": "9827004292",
+      "address": "House 101, Natun Pally, Nabagram, Purba Bardhaman",
+      "category": "sc",
+      "status": "active",
+      "avatar": "/avatars/student-09.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 516458,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PAPPPP",
+        "PPPPPP",
+        "HPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPL-"
+      ]
+    },
+    {
+      "id": "stu-0298",
+      "admissionNo": "NUV-2020-0298",
+      "rollNo": "22",
+      "sectionId": "VIII-B",
+      "nameBn": "বিক্রম দত্ত",
+      "nameEn": "Bikram Dutta",
+      "gender": "male",
+      "dob": "2013-03-09",
+      "guardianName": "মৃণাল Dutta",
+      "guardianPhone": "9864698356",
+      "address": "House 70, Purba Para, Nabagram, Purba Bardhaman",
+      "category": "sc",
+      "status": "active",
+      "avatar": "/avatars/student-10.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 283702,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": false
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPHPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0299",
+      "admissionNo": "NUV-2020-0299",
+      "rollNo": "23",
+      "sectionId": "VIII-B",
+      "nameBn": "শুভম দাস",
+      "nameEn": "Shubham Das",
+      "gender": "male",
+      "dob": "2013-08-19",
+      "guardianName": "সুমন Das",
+      "guardianPhone": "9831858640",
+      "address": "House 26, School Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-11.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 385999,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPHPP",
+        "PPPPPP",
+        "PPPPAP",
+        "PPPPPP",
+        "PPPPPH",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0300",
+      "admissionNo": "NUV-2020-0300",
+      "rollNo": "24",
+      "sectionId": "VIII-B",
+      "nameBn": "তন্ময় ভট্টাচার্য",
+      "nameEn": "Tanmoy Bhattacharya",
+      "gender": "male",
+      "dob": "2013-07-23",
+      "guardianName": "অমৃত Bhattacharya",
+      "guardianPhone": "9874617123",
+      "address": "House 54, Uttar Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-12.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 786934,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPAL",
+        "PPPPPP",
+        "PPPPLP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PAPPPP",
+        "PPPPPP",
+        "PLPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0301",
+      "admissionNo": "NUV-2020-0301",
+      "rollNo": "25",
+      "sectionId": "VIII-B",
+      "nameBn": "দিয়া দোলুই",
+      "nameEn": "Diya Dolui",
+      "gender": "female",
+      "dob": "2013-07-23",
+      "guardianName": "কৌশিক Dolui",
+      "guardianPhone": "9815127844",
+      "address": "House 75, Shibtala, Nabagram, Purba Bardhaman",
+      "category": "st",
+      "status": "active",
+      "avatar": "/avatars/student-13.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 560946,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PAPPPP",
+        "PPPPLP",
+        "PPPPPP",
+        "PPPPAP",
+        "PPPPPP",
+        "PPAPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0302",
+      "admissionNo": "NUV-2020-0302",
+      "rollNo": "26",
+      "sectionId": "VIII-B",
+      "nameBn": "তনুশ্রী সাঁতরা",
+      "nameEn": "Tanushree Satra",
+      "gender": "female",
+      "dob": "2013-01-18",
+      "guardianName": "সায়ন Satra",
+      "guardianPhone": "9875191781",
+      "address": "House 88, Kalitala, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-14.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 807271,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PLPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0303",
+      "admissionNo": "NUV-2020-0303",
+      "rollNo": "27",
+      "sectionId": "VIII-B",
+      "nameBn": "প্রদীপ সামন্ত",
+      "nameEn": "Pradip Samanta",
+      "gender": "male",
+      "dob": "2013-03-05",
+      "guardianName": "কৌশিক Samanta",
+      "guardianPhone": "9824674038",
+      "address": "House 76, Natun Pally, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-15.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 492770,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PLPPPP",
+        "PPPPPP",
+        "PAPPPP",
+        "PPPPPP",
+        "PPPAPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0304",
+      "admissionNo": "NUV-2020-0304",
+      "rollNo": "28",
+      "sectionId": "VIII-B",
+      "nameBn": "তনুশ্রী মণ্ডল",
+      "nameEn": "Tanushree Mondal",
+      "gender": "female",
+      "dob": "2013-06-09",
+      "guardianName": "সৌম্যদীপ Mondal",
+      "guardianPhone": "9851971184",
+      "address": "House 51, Purba Para, Nabagram, Purba Bardhaman",
+      "category": "obc",
+      "status": "active",
+      "avatar": "/avatars/student-16.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 111846,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPAPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPHPP-"
+      ]
+    },
+    {
+      "id": "stu-0305",
+      "admissionNo": "NUV-2020-0305",
+      "rollNo": "29",
+      "sectionId": "VIII-B",
+      "nameBn": "ঐশিকী সরকার",
+      "nameEn": "Aishiki Sarkar",
+      "gender": "female",
+      "dob": "2013-05-27",
+      "guardianName": "দেবজিৎ Sarkar",
+      "guardianPhone": "9826815762",
+      "address": "House 15, Natun Pally, Nabagram, Purba Bardhaman",
+      "category": "st",
+      "status": "active",
+      "avatar": "/avatars/student-17.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 804716,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPLPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PHPPPP",
+        "PAPPPP",
+        "PPPPLP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PAPPP-"
+      ]
+    },
+    {
+      "id": "stu-0306",
+      "admissionNo": "NUV-2020-0306",
+      "rollNo": "30",
+      "sectionId": "VIII-B",
+      "nameBn": "তুহিন ভট্টাচার্য",
+      "nameEn": "Tuhin Bhattacharya",
+      "gender": "male",
+      "dob": "2013-01-21",
+      "guardianName": "আর্য Bhattacharya",
+      "guardianPhone": "9895793709",
+      "address": "House 31, Purba Para, Nabagram, Purba Bardhaman",
+      "category": "sc",
+      "status": "active",
+      "avatar": "/avatars/student-18.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 617978,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPLP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0307",
+      "admissionNo": "NUV-2020-0307",
+      "rollNo": "31",
+      "sectionId": "VIII-B",
+      "nameBn": "সুস্মিতা সেন",
+      "nameEn": "Susmita Sen",
+      "gender": "female",
+      "dob": "2013-09-08",
+      "guardianName": "অমিতাভ Sen",
+      "guardianPhone": "9812314846",
+      "address": "House 98, Kalitala, Nabagram, Purba Bardhaman",
+      "category": "st",
+      "status": "active",
+      "avatar": "/avatars/student-19.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 883425,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0308",
+      "admissionNo": "NUV-2020-0308",
+      "rollNo": "32",
+      "sectionId": "VIII-B",
+      "nameBn": "সন্দীপ খাঁ",
+      "nameEn": "Sandip Khan",
+      "gender": "male",
+      "dob": "2013-04-19",
+      "guardianName": "শুভ্র Khan",
+      "guardianPhone": "9893531229",
+      "address": "House 103, Natun Pally, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-20.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 234550,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPLP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "APPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0309",
+      "admissionNo": "NUV-2020-0309",
+      "rollNo": "33",
+      "sectionId": "VIII-B",
+      "nameBn": "বৃষ্টি সামন্ত",
+      "nameEn": "Brishti Samanta",
+      "gender": "female",
+      "dob": "2013-12-20",
+      "guardianName": "অমিতাভ Samanta",
+      "guardianPhone": "9811469133",
+      "address": "House 58, School Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-21.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 62150,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPLPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPHPP",
+        "PPPPAP",
+        "PPPPPA",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0310",
+      "admissionNo": "NUV-2020-0310",
+      "rollNo": "34",
+      "sectionId": "VIII-B",
+      "nameBn": "সুব্রত হালদার",
+      "nameEn": "Subrata Haldar",
+      "gender": "male",
+      "dob": "2013-01-22",
+      "guardianName": "অনির্বাণ Haldar",
+      "guardianPhone": "9819260937",
+      "address": "House 31, School Para, Nabagram, Purba Bardhaman",
+      "category": "sc",
+      "status": "active",
+      "avatar": "/avatars/student-22.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 208405,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": false
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0311",
+      "admissionNo": "NUV-2020-0311",
+      "rollNo": "35",
+      "sectionId": "VIII-B",
+      "nameBn": "মহুয়া ভট্টাচার্য",
+      "nameEn": "Mahua Bhattacharya",
+      "gender": "female",
+      "dob": "2013-05-20",
+      "guardianName": "সুব্রত Bhattacharya",
+      "guardianPhone": "9886543175",
+      "address": "House 16, School Para, Nabagram, Purba Bardhaman",
+      "category": "obc",
+      "status": "active",
+      "avatar": "/avatars/student-23.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 379532,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPAPP",
+        "APPHPP",
+        "PPPPPA",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0312",
+      "admissionNo": "NUV-2020-0312",
+      "rollNo": "36",
+      "sectionId": "VIII-B",
+      "nameBn": "প্রীতম শীল",
+      "nameEn": "Pritam Shil",
+      "gender": "male",
+      "dob": "2013-01-09",
+      "guardianName": "আর্য Shil",
+      "guardianPhone": "9828343159",
+      "address": "House 43, Nabagram Station Road, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-24.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 611428,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPLP",
+        "PPAPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPLP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PLPPPP",
+        "PPPAPP",
+        "PPPAP-"
+      ]
+    },
+    {
+      "id": "stu-0313",
+      "admissionNo": "NUV-2020-0313",
+      "rollNo": "37",
+      "sectionId": "VIII-B",
+      "nameBn": "পৌলমী চট্টোপাধ্যায়",
+      "nameEn": "Paulami Chatterjee",
+      "gender": "female",
+      "dob": "2013-07-01",
+      "guardianName": "হৃতিক Chatterjee",
+      "guardianPhone": "9859484800",
+      "address": "House 55, Bazar Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-25.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 817580,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPAL",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PAPPPP",
+        "PPHPPL",
+        "LPPPPP",
+        "PPPPAP",
+        "PPPPPP",
+        "PPPPA-"
+      ]
+    },
+    {
+      "id": "stu-0314",
+      "admissionNo": "NUV-2020-0314",
+      "rollNo": "38",
+      "sectionId": "VIII-B",
+      "nameBn": "শ্রেয়া ভৌমিক",
+      "nameEn": "Shreya Bhowmik",
+      "gender": "female",
+      "dob": "2013-04-03",
+      "guardianName": "সুব্রত Bhowmik",
+      "guardianPhone": "9862920832",
+      "address": "House 101, Nabagram Station Road, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-26.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 462120,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": false
+        }
+      ],
+      "attendanceHistory": [
+        "PPLPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPAP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPAPP",
+        "PPPPPP",
+        "HPPPPP",
+        "PAPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0315",
+      "admissionNo": "NUV-2020-0315",
+      "rollNo": "39",
+      "sectionId": "VIII-B",
+      "nameBn": "রাহুল সাঁতরা",
+      "nameEn": "Rahul Satra",
+      "gender": "male",
+      "dob": "2013-07-05",
+      "guardianName": "রাহুল Satra",
+      "guardianPhone": "9897527963",
+      "address": "House 75, Nabagram Station Road, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-27.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 975410,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": false
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "APPAPP",
+        "PPPAPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PLPPPP",
+        "PPPPPP",
+        "PPPPLP",
+        "PPPPPP",
+        "PPPAPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0316",
+      "admissionNo": "NUV-2020-0316",
+      "rollNo": "40",
+      "sectionId": "VIII-B",
+      "nameBn": "ঈশিতা পাত্র",
+      "nameEn": "Ishita Patra",
+      "gender": "female",
+      "dob": "2013-04-27",
+      "guardianName": "রূপম Patra",
+      "guardianPhone": "9879495660",
+      "address": "House 25, School Para, Nabagram, Purba Bardhaman",
+      "category": "obc",
+      "status": "active",
+      "avatar": "/avatars/student-28.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 486718,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPA",
+        "PPPPPP",
+        "PPPPPP",
+        "PAHPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPHPHP",
+        "PPPPPP",
+        "PPAPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0317",
+      "admissionNo": "NUV-2020-0317",
+      "rollNo": "41",
+      "sectionId": "VIII-B",
+      "nameBn": "অনির্বাণ সাহা",
+      "nameEn": "Anirban Saha",
+      "gender": "male",
+      "dob": "2013-01-09",
+      "guardianName": "সন্দীপ Saha",
+      "guardianPhone": "9872242415",
+      "address": "House 9, Bazar Para, Nabagram, Purba Bardhaman",
+      "category": "st",
+      "status": "active",
+      "avatar": "/avatars/student-29.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 927594,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPAPL",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPAPAP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0318",
+      "admissionNo": "NUV-2020-0318",
+      "rollNo": "42",
+      "sectionId": "VIII-B",
+      "nameBn": "শ্রেয়া মজুমদার",
+      "nameEn": "Shreya Majumdar",
+      "gender": "female",
+      "dob": "2013-05-14",
+      "guardianName": "রাজেশ Majumdar",
+      "guardianPhone": "9827648601",
+      "address": "House 4, Nabagram Station Road, Nabagram, Purba Bardhaman",
+      "category": "obc",
+      "status": "active",
+      "avatar": "/avatars/student-30.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 959351,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "APPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPAP",
+        "PPPPA-"
+      ]
+    },
+    {
+      "id": "stu-0319",
+      "admissionNo": "NUV-2020-0319",
+      "rollNo": "43",
+      "sectionId": "VIII-B",
+      "nameBn": "দীপিকা গোস্বামী",
+      "nameEn": "Deepika Goswami",
+      "gender": "female",
+      "dob": "2013-03-11",
+      "guardianName": "হৃতিক Goswami",
+      "guardianPhone": "9861587815",
+      "address": "House 11, Paschim Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-31.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 260281,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PLPPPP",
+        "PPPPPP",
+        "PPPPAP",
+        "PPHPPP",
+        "PPPPPP",
+        "HPPPPP",
+        "PPPPPP",
+        "PAPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0320",
+      "admissionNo": "NUV-2020-0320",
+      "rollNo": "44",
+      "sectionId": "VIII-B",
+      "nameBn": "লিপিকা দত্ত",
+      "nameEn": "Lipika Dutta",
+      "gender": "female",
+      "dob": "2013-09-22",
+      "guardianName": "সুমন Dutta",
+      "guardianPhone": "9878155838",
+      "address": "House 115, Dakshin Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-32.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 119483,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PLPPLP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPAP",
+        "PPAPPP",
+        "PPPPPP",
+        "PPPPPH",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0321",
+      "admissionNo": "NUV-2020-0321",
+      "rollNo": "45",
+      "sectionId": "VIII-B",
+      "nameBn": "বৃষ্টি সাহা",
+      "nameEn": "Brishti Saha",
+      "gender": "female",
+      "dob": "2013-03-27",
+      "guardianName": "সৌম্যদীপ Saha",
+      "guardianPhone": "9833933203",
+      "address": "House 33, Nabagram Station Road, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-01.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 617056,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPAPPP",
+        "PLPPPP",
+        "PPPPAP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPHPPP",
+        "PPPPPP",
+        "LPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0322",
+      "admissionNo": "NUV-2020-0322",
+      "rollNo": "46",
+      "sectionId": "VIII-B",
+      "nameBn": "সুস্মিতা দোলুই",
+      "nameEn": "Susmita Dolui",
+      "gender": "female",
+      "dob": "2013-06-19",
+      "guardianName": "অর্ঘ্য Dolui",
+      "guardianPhone": "9864657495",
+      "address": "House 57, School Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-02.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 461678,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "LHPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPLLPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0323",
+      "admissionNo": "NUV-2020-0323",
+      "rollNo": "47",
+      "sectionId": "VIII-B",
+      "nameBn": "প্রদীপ মজুমদার",
+      "nameEn": "Pradip Majumdar",
+      "gender": "male",
+      "dob": "2013-04-02",
+      "guardianName": "রাহুল Majumdar",
+      "guardianPhone": "9881192841",
+      "address": "House 83, Paschim Para, Nabagram, Purba Bardhaman",
+      "category": "general",
+      "status": "active",
+      "avatar": "/avatars/student-03.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 951353,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": true
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "APPPPL",
+        "PPPAPP",
+        "PPPPHP",
+        "PAPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPPP",
+        "PPPPP-"
+      ]
+    },
+    {
+      "id": "stu-0324",
+      "admissionNo": "NUV-2020-0324",
+      "rollNo": "48",
+      "sectionId": "VIII-B",
+      "nameBn": "শর্মিষ্ঠা রায়",
+      "nameEn": "Sharmistha Roy",
+      "gender": "female",
+      "dob": "2013-10-27",
+      "guardianName": "দেবজিৎ Roy",
+      "guardianPhone": "9861273157",
+      "address": "House 68, Natun Pally, Nabagram, Purba Bardhaman",
+      "category": "st",
+      "status": "active",
+      "avatar": "/avatars/student-04.svg",
+      "admissionDate": "2020-04-01",
+      "attendanceSeed": 785158,
+      "attendanceRisk": "normal",
+      "documents": [
+        {
+          "type": "birth_certificate",
+          "label": "Birth certificate",
+          "verified": true
+        },
+        {
+          "type": "aadhaar",
+          "label": "Aadhaar (masked)",
+          "verified": true
+        },
+        {
+          "type": "previous_report",
+          "label": "Previous report card",
+          "verified": false
+        },
+        {
+          "type": "guardian_id",
+          "label": "Guardian ID",
+          "verified": true
+        }
+      ],
+      "attendanceHistory": [
+        "PPPPPP",
+        "PPPAPP",
+        "PPPPPP",
+        "PPLPLP",
+        "PPPPLP",
+        "PPPPPA",
+        "PPPPPP",
+        "PPPPPP",
+        "LPPPPP",
+        "PPPPPP",
+        "PPLPPP",
+        "APPPP-"
+      ]
+    }
+  ],
+  "subjects": [
+    {
+      "id": "ben",
+      "code": "BEN",
+      "nameBn": "বাংলা",
+      "nameEn": "Bengali"
+    },
+    {
+      "id": "eng",
+      "code": "ENG",
+      "nameBn": "ইংরেজি",
+      "nameEn": "English"
+    },
+    {
+      "id": "math",
+      "code": "MATH",
+      "nameBn": "গণিত",
+      "nameEn": "Mathematics"
+    },
+    {
+      "id": "psci",
+      "code": "PSCI",
+      "nameBn": "ভৌতবিজ্ঞান",
+      "nameEn": "Physical Science"
+    },
+    {
+      "id": "lsci",
+      "code": "LSCI",
+      "nameBn": "জীবনবিজ্ঞান",
+      "nameEn": "Life Science"
+    },
+    {
+      "id": "hist",
+      "code": "HIST",
+      "nameBn": "ইতিহাস",
+      "nameEn": "History"
+    },
+    {
+      "id": "geo",
+      "code": "GEO",
+      "nameBn": "ভূগোল",
+      "nameEn": "Geography"
+    },
+    {
+      "id": "we",
+      "code": "WE",
+      "nameBn": "কর্মশিক্ষা",
+      "nameEn": "Work Education"
+    }
+  ],
+  "periods": [
+    {
+      "period": 1,
+      "start": "08:00",
+      "end": "08:40"
+    },
+    {
+      "period": 2,
+      "start": "08:45",
+      "end": "09:25"
+    },
+    {
+      "period": 3,
+      "start": "09:30",
+      "end": "10:10"
+    },
+    {
+      "period": 4,
+      "start": "10:20",
+      "end": "11:00"
+    },
+    {
+      "period": 5,
+      "start": "11:05",
+      "end": "11:45"
+    },
+    {
+      "period": 6,
+      "start": "11:50",
+      "end": "12:30"
+    }
+  ],
+  "currentPeriod": 4,
+  "now": "10:26",
+  "todayTimetable": [
+    {
+      "id": "tt-0482",
+      "day": "SAT",
+      "period": 1,
+      "start": "08:00",
+      "end": "08:40",
+      "sectionId": "VIII-B",
+      "subjectId": "psci",
+      "teacherId": "staff-ananya",
+      "room": "R-402"
+    },
+    {
+      "id": "tt-0494",
+      "day": "SAT",
+      "period": 2,
+      "start": "08:45",
+      "end": "09:25",
+      "sectionId": "IX-A",
+      "subjectId": "psci",
+      "teacherId": "staff-ananya",
+      "room": "R-501"
+    },
+    {
+      "id": "tt-0506",
+      "day": "SAT",
+      "period": 3,
+      "start": "09:30",
+      "end": "10:10",
+      "sectionId": "IX-B",
+      "subjectId": "psci",
+      "teacherId": "staff-ananya",
+      "room": "R-502"
+    }
+  ],
+  "freePeriods": [
+    4,
+    5,
+    6
+  ],
+  "coverBoard": [
+    {
+      "entryId": "tt-0499",
+      "period": 2,
+      "start": "08:45",
+      "end": "09:25",
+      "sectionId": "V-B",
+      "subjectId": "eng",
+      "subjectNameBn": "ইংরেজি",
+      "subjectNameEn": "English",
+      "room": "R-102",
+      "absentTeacherId": "staff-teacher-06",
+      "absentTeacherNameBn": "তন্ময় মুখার্জী",
+      "absentTeacherNameEn": "Tanmoy Mukherjee",
+      "absentTeacherAvatar": "/avatars/student-08.svg",
+      "substituteTeacherId": "staff-teacher-02",
+      "substituteTeacherNameBn": "অনিন্দিতা রায়",
+      "substituteTeacherNameEn": "Anindita Roy",
+      "status": "covered",
+      "availableToAnanya": false
+    },
+    {
+      "entryId": "tt-0522",
+      "period": 4,
+      "start": "10:20",
+      "end": "11:00",
+      "sectionId": "VI-A",
+      "subjectId": "eng",
+      "subjectNameBn": "ইংরেজি",
+      "subjectNameEn": "English",
+      "room": "R-201",
+      "absentTeacherId": "staff-teacher-06",
+      "absentTeacherNameBn": "তন্ময় মুখার্জী",
+      "absentTeacherNameEn": "Tanmoy Mukherjee",
+      "absentTeacherAvatar": "/avatars/student-08.svg",
+      "substituteTeacherId": null,
+      "substituteTeacherNameBn": null,
+      "substituteTeacherNameEn": null,
+      "status": "uncovered",
+      "availableToAnanya": true
+    },
+    {
+      "entryId": "tt-0535",
+      "period": 5,
+      "start": "11:05",
+      "end": "11:45",
+      "sectionId": "VII-A",
+      "subjectId": "math",
+      "subjectNameBn": "গণিত",
+      "subjectNameEn": "Mathematics",
+      "room": "R-301",
+      "absentTeacherId": "staff-teacher-10",
+      "absentTeacherNameBn": "কৌশিক বিশ্বাস",
+      "absentTeacherNameEn": "Kaushik Biswas",
+      "absentTeacherAvatar": "/avatars/student-12.svg",
+      "substituteTeacherId": null,
+      "substituteTeacherNameBn": null,
+      "substituteTeacherNameEn": null,
+      "status": "uncovered",
+      "availableToAnanya": true
+    }
+  ],
+  "substitutions": [
+    {
+      "id": "sub-001",
+      "date": "2026-10-31",
+      "day": "SAT",
+      "period": 2,
+      "sectionId": "V-B",
+      "subjectId": "eng",
+      "absentTeacherId": "staff-teacher-06",
+      "substituteTeacherId": "staff-teacher-02",
+      "status": "covered",
+      "assignedBy": "staff-hm",
+      "reason": "English period covered while Mr. Mukherjee attended a family medical appointment.",
+      "createdAt": "2026-10-31T08:42:00+05:30"
+    }
+  ],
+  "notices": [
+    {
+      "id": "notice-001",
+      "title": "Half-day today",
+      "bodyEn": "School will close at 12:30 pm today. Buses will leave at 12:45 pm.",
+      "bodyBn": "আজ দুপুর ১২:৩০-এ বিদ্যালয় ছুটি হবে। বাস ১২:৪৫-এ রওনা দেবে।",
+      "audience": "all",
+      "publishedBy": "staff-hm",
+      "publishedAt": "2026-10-31T07:10:00+05:30",
+      "status": "published"
+    },
+    {
+      "id": "notice-003",
+      "title": "Staff meeting",
+      "bodyEn": "A staff meeting will be held in the library at 3:30 pm today.",
+      "bodyBn": "আজ বিকেল ৩:৩০-এ লাইব্রেরিতে শিক্ষক-শিক্ষিকা সভা হবে।",
+      "audience": "teachers",
+      "publishedBy": "staff-hm",
+      "publishedAt": "2026-10-31T09:05:00+05:30",
+      "status": "published"
+    },
+    {
+      "id": "notice-004",
+      "title": "Fire drill",
+      "bodyEn": "A fire drill will take place on Tuesday at 11:00 am.",
+      "bodyBn": "মঙ্গলবার সকাল ১১টায় অগ্নিনির্বাপণ মহড়া হবে।",
+      "audience": "all",
+      "publishedBy": "staff-hm",
+      "publishedAt": "2026-10-29T12:00:00+05:30",
+      "status": "published"
+    },
+    {
+      "id": "notice-005",
+      "title": "Winter uniform from November",
+      "bodyEn": "Winter uniform is compulsory from 1 November.",
+      "bodyBn": "১ নভেম্বর থেকে শীতকালীন ইউনিফর্ম বাধ্যতামূলক।",
+      "audience": "all",
+      "publishedBy": "staff-hm",
+      "publishedAt": "2026-10-28T10:20:00+05:30",
+      "status": "published"
+    }
+  ]
+}
