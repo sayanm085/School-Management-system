@@ -1,0 +1,1145 @@
+{
+ "school": {
+  "nameEn": "Nabagram Uchcha Vidyalaya (Demo)",
+  "nameBn": "নবগ্রাম উচ্চ বিদ্যালয় (ডেমো)",
+  "code": "WB-NAB-001",
+  "udise": "19000000001"
+ },
+ "student": {
+  "id": "stu-0277",
+  "studentId": "STU-2026-0277",
+  "admissionNo": "NUV-2020-0277",
+  "nameEn": "Susmita Laha",
+  "nameBn": "সুস্মিতা লাহা",
+  "gender": "female",
+  "classLevel": "VIII",
+  "section": "B",
+  "room": "R-402",
+  "rollNo": "01",
+  "guardianName": "অমৃত Laha",
+  "guardianPhoneMasked": "98XXX XX322",
+  "avatar": "/avatars/student-21.svg"
+ },
+ "academicYear": {
+  "id": "ay-2026-27",
+  "label": "2026–27",
+  "startDate": "2026-04-01",
+  "endDate": "2027-03-31",
+  "isActive": true
+ },
+ "attendance": {
+  "summaryPct": 91,
+  "days": [
+   {
+    "date": "2026-09-01",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-02",
+    "status": "absent"
+   },
+   {
+    "date": "2026-09-03",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-04",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-07",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-08",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-09",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-10",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-11",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-14",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-15",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-16",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-17",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-18",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-21",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-22",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-23",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-24",
+    "status": "late"
+   },
+   {
+    "date": "2026-09-25",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-28",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-29",
+    "status": "present"
+   },
+   {
+    "date": "2026-09-30",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-01",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-02",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-05",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-06",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-07",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-08",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-09",
+    "status": "absent"
+   },
+   {
+    "date": "2026-10-12",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-13",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-14",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-15",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-16",
+    "status": "absent"
+   },
+   {
+    "date": "2026-10-19",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-20",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-21",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-22",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-23",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-26",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-27",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-28",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-29",
+    "status": "present"
+   },
+   {
+    "date": "2026-10-30",
+    "status": "present"
+   },
+   {
+    "date": "2026-11-02",
+    "status": "present"
+   }
+  ]
+ },
+ "exams": [
+  {
+   "id": "exam-half-2026",
+   "name": "Half-Yearly Examination",
+   "term": "Half-Yearly 2026",
+   "startDate": "2026-09-14",
+   "endDate": "2026-09-26",
+   "status": "published"
+  },
+  {
+   "id": "exam-annual-2027",
+   "name": "Annual Examination",
+   "term": "Annual 2026–27",
+   "startDate": "2027-11-15",
+   "endDate": "2027-11-27",
+   "status": "draft"
+  }
+ ],
+ "mocks": [
+  {
+   "id": "mt-3",
+   "subjectId": "math",
+   "subjectEn": "Mathematics",
+   "topicEn": "Algebra · MT 3",
+   "topicBn": "বীজগণিত · এমটি ৩",
+   "scorePct": 85,
+   "date": "2026-10-21"
+  },
+  {
+   "id": "mt-4",
+   "subjectId": "math",
+   "subjectIdBn": "",
+   "subjectEn": "Mathematics",
+   "topicEn": "Fractions · MT 4",
+   "topicBn": "ভগ্নাংশ · এমটি ৪",
+   "scorePct": 61,
+   "date": "2026-10-28"
+  },
+  {
+   "id": "mt-2",
+   "subjectId": "psci",
+   "subjectEn": "Physical Science",
+   "topicEn": "Elements · MT 2",
+   "topicBn": "মৌল · এমটি ২",
+   "scorePct": 74,
+   "date": "2026-10-14"
+  }
+ ],
+ "marks": [
+  {
+   "examId": "exam-half-2026",
+   "subjectId": "ben",
+   "subjectEn": "Bengali",
+   "subjectBn": "বাংলা",
+   "total": 91,
+   "maxMarks": 100,
+   "examDate": "2026-09-14"
+  },
+  {
+   "examId": "exam-half-2026",
+   "subjectId": "eng",
+   "subjectEn": "English",
+   "subjectBn": "ইংরেজি",
+   "total": 95,
+   "maxMarks": 100,
+   "examDate": "2026-09-15"
+  },
+  {
+   "examId": "exam-half-2026",
+   "subjectId": "math",
+   "subjectEn": "Mathematics",
+   "subjectBn": "গণিত",
+   "total": 96,
+   "maxMarks": 100,
+   "examDate": "2026-09-16"
+  },
+  {
+   "examId": "exam-half-2026",
+   "subjectId": "psci",
+   "subjectEn": "Physical Science",
+   "subjectBn": "ভৌতবিজ্ঞান",
+   "total": 86,
+   "maxMarks": 100,
+   "examDate": "2026-09-17"
+  },
+  {
+   "examId": "exam-half-2026",
+   "subjectId": "lsci",
+   "subjectEn": "Life Science",
+   "subjectBn": "জীবনবিজ্ঞান",
+   "total": 96,
+   "maxMarks": 100,
+   "examDate": "2026-09-18"
+  },
+  {
+   "examId": "exam-half-2026",
+   "subjectId": "hist",
+   "subjectEn": "History",
+   "subjectBn": "ইতিহাস",
+   "total": 94,
+   "maxMarks": 100,
+   "examDate": "2026-09-19"
+  },
+  {
+   "examId": "exam-half-2026",
+   "subjectId": "geo",
+   "subjectEn": "Geography",
+   "subjectBn": "ভূগোল",
+   "total": 85,
+   "maxMarks": 100,
+   "examDate": "2026-09-20"
+  },
+  {
+   "examId": "exam-half-2026",
+   "subjectId": "we",
+   "subjectEn": "Work Education",
+   "subjectBn": "কর্মশিক্ষা",
+   "total": 80,
+   "maxMarks": 100,
+   "examDate": "2026-09-21"
+  }
+ ],
+ "bills": [
+  {
+   "id": "bill-0277",
+   "billNo": "BILL/2026/0277",
+   "studentId": "stu-0277",
+   "academicYearId": "ay-2026-27",
+   "period": "2026–27 · Term 1",
+   "totalPaise": 40000,
+   "concessionPaise": 0,
+   "duePaise": 40000,
+   "status": "unpaid",
+   "dueDate": "2026-11-10",
+   "items": [
+    {
+     "id": "bi-277-fee-exam",
+     "feeHeadId": "fee-exam",
+     "nameBn": "পরীক্ষা ফি",
+     "nameEn": "Examination Fee",
+     "amountPaise": 5000
+    },
+    {
+     "id": "bi-277-fee-session",
+     "feeHeadId": "fee-session",
+     "nameBn": "সেশন চার্জ",
+     "nameEn": "Session Charge",
+     "amountPaise": 12000
+    },
+    {
+     "id": "bi-277-fee-lab",
+     "feeHeadId": "fee-lab",
+     "nameBn": "ল্যাবরেটরি ফি",
+     "nameEn": "Laboratory Fee",
+     "amountPaise": 8000
+    },
+    {
+     "id": "bi-277-fee-library",
+     "feeHeadId": "fee-library",
+     "nameBn": "লাইব্রেরি ফি",
+     "nameEn": "Library Fee",
+     "amountPaise": 3000
+    },
+    {
+     "id": "bi-277-fee-sports",
+     "feeHeadId": "fee-sports",
+     "nameBn": "ক্রীড়া ফি",
+     "nameEn": "Sports Fee",
+     "amountPaise": 2000
+    },
+    {
+     "id": "bi-277-fee-development",
+     "feeHeadId": "fee-development",
+     "nameBn": "উন্নয়ন ফি",
+     "nameEn": "Development Fee",
+     "amountPaise": 10000
+    }
+   ]
+  }
+ ],
+ "payments": [],
+ "timetable": [
+  {
+   "day": "MON",
+   "period": 1,
+   "start": "08:00",
+   "end": "08:40",
+   "subjectId": "geo",
+   "subjectEn": "Geography",
+   "subjectBn": "ভূগোল",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "MON",
+   "period": 2,
+   "start": "08:45",
+   "end": "09:25",
+   "subjectId": "we",
+   "subjectEn": "Work Education",
+   "subjectBn": "কর্মশিক্ষা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-06"
+  },
+  {
+   "day": "MON",
+   "period": 3,
+   "start": "09:30",
+   "end": "10:10",
+   "subjectId": "ben",
+   "subjectEn": "Bengali",
+   "subjectBn": "বাংলা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-13"
+  },
+  {
+   "day": "MON",
+   "period": 4,
+   "start": "10:20",
+   "end": "11:00",
+   "subjectId": "eng",
+   "subjectEn": "English",
+   "subjectBn": "ইংরেজি",
+   "room": "R-402",
+   "teacherId": "staff-minori"
+  },
+  {
+   "day": "MON",
+   "period": 5,
+   "start": "11:05",
+   "end": "11:45",
+   "subjectId": "math",
+   "subjectEn": "Mathematics",
+   "subjectBn": "গণিত",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "MON",
+   "period": 6,
+   "start": "11:50",
+   "end": "12:30",
+   "subjectId": "psci",
+   "subjectEn": "Physical Science",
+   "subjectBn": "ভৌতবিজ্ঞান",
+   "room": "R-402",
+   "teacherId": "staff-teacher-04"
+  },
+  {
+   "day": "MON",
+   "period": 7,
+   "start": "13:00",
+   "end": "13:40",
+   "subjectId": "lsci",
+   "subjectEn": "Life Science",
+   "subjectBn": "জীবনবিজ্ঞান",
+   "room": "R-402",
+   "teacherId": "staff-teacher-13"
+  },
+  {
+   "day": "MON",
+   "period": 8,
+   "start": "13:45",
+   "end": "14:25",
+   "subjectId": "hist",
+   "subjectEn": "History",
+   "subjectBn": "ইতিহাস",
+   "room": "R-402",
+   "teacherId": "staff-teacher-10"
+  },
+  {
+   "day": "TUE",
+   "period": 1,
+   "start": "08:00",
+   "end": "08:40",
+   "subjectId": "eng",
+   "subjectEn": "English",
+   "subjectBn": "ইংরেজি",
+   "room": "R-402",
+   "teacherId": "staff-teacher-18"
+  },
+  {
+   "day": "TUE",
+   "period": 2,
+   "start": "08:45",
+   "end": "09:25",
+   "subjectId": "math",
+   "subjectEn": "Mathematics",
+   "subjectBn": "গণিত",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "TUE",
+   "period": 3,
+   "start": "09:30",
+   "end": "10:10",
+   "subjectId": "psci",
+   "subjectEn": "Physical Science",
+   "subjectBn": "ভৌতবিজ্ঞান",
+   "room": "R-402",
+   "teacherId": "staff-teacher-04"
+  },
+  {
+   "day": "TUE",
+   "period": 4,
+   "start": "10:20",
+   "end": "11:00",
+   "subjectId": "lsci",
+   "subjectEn": "Life Science",
+   "subjectBn": "জীবনবিজ্ঞান",
+   "room": "R-402",
+   "teacherId": "staff-teacher-21"
+  },
+  {
+   "day": "TUE",
+   "period": 5,
+   "start": "11:05",
+   "end": "11:45",
+   "subjectId": "hist",
+   "subjectEn": "History",
+   "subjectBn": "ইতিহাস",
+   "room": "R-402",
+   "teacherId": "staff-teacher-10"
+  },
+  {
+   "day": "TUE",
+   "period": 6,
+   "start": "11:50",
+   "end": "12:30",
+   "subjectId": "geo",
+   "subjectEn": "Geography",
+   "subjectBn": "ভূগোল",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "TUE",
+   "period": 7,
+   "start": "13:00",
+   "end": "13:40",
+   "subjectId": "we",
+   "subjectEn": "Work Education",
+   "subjectBn": "কর্মশিক্ষা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "TUE",
+   "period": 8,
+   "start": "13:45",
+   "end": "14:25",
+   "subjectId": "ben",
+   "subjectEn": "Bengali",
+   "subjectBn": "বাংলা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-13"
+  },
+  {
+   "day": "WED",
+   "period": 1,
+   "start": "08:00",
+   "end": "08:40",
+   "subjectId": "lsci",
+   "subjectEn": "Life Science",
+   "subjectBn": "জীবনবিজ্ঞান",
+   "room": "R-402",
+   "teacherId": "staff-teacher-21"
+  },
+  {
+   "day": "WED",
+   "period": 2,
+   "start": "08:45",
+   "end": "09:25",
+   "subjectId": "hist",
+   "subjectEn": "History",
+   "subjectBn": "ইতিহাস",
+   "room": "R-402",
+   "teacherId": "staff-teacher-10"
+  },
+  {
+   "day": "WED",
+   "period": 3,
+   "start": "09:30",
+   "end": "10:10",
+   "subjectId": "geo",
+   "subjectEn": "Geography",
+   "subjectBn": "ভূগোল",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "WED",
+   "period": 4,
+   "start": "10:20",
+   "end": "11:00",
+   "subjectId": "we",
+   "subjectEn": "Work Education",
+   "subjectBn": "কর্মশিক্ষা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-06"
+  },
+  {
+   "day": "WED",
+   "period": 5,
+   "start": "11:05",
+   "end": "11:45",
+   "subjectId": "ben",
+   "subjectEn": "Bengali",
+   "subjectBn": "বাংলা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-13"
+  },
+  {
+   "day": "WED",
+   "period": 6,
+   "start": "11:50",
+   "end": "12:30",
+   "subjectId": "eng",
+   "subjectEn": "English",
+   "subjectBn": "ইংরেজি",
+   "room": "R-402",
+   "teacherId": "staff-teacher-02"
+  },
+  {
+   "day": "WED",
+   "period": 7,
+   "start": "13:00",
+   "end": "13:40",
+   "subjectId": "math",
+   "subjectEn": "Mathematics",
+   "subjectBn": "গণিত",
+   "room": "R-402",
+   "teacherId": "staff-teacher-03"
+  },
+  {
+   "day": "WED",
+   "period": 8,
+   "start": "13:45",
+   "end": "14:25",
+   "subjectId": "psci",
+   "subjectEn": "Physical Science",
+   "subjectBn": "ভৌতবিজ্ঞান",
+   "room": "R-402",
+   "teacherId": "staff-teacher-04"
+  },
+  {
+   "day": "THU",
+   "period": 1,
+   "start": "08:00",
+   "end": "08:40",
+   "subjectId": "we",
+   "subjectEn": "Work Education",
+   "subjectBn": "কর্মশিক্ষা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-06"
+  },
+  {
+   "day": "THU",
+   "period": 2,
+   "start": "08:45",
+   "end": "09:25",
+   "subjectId": "ben",
+   "subjectEn": "Bengali",
+   "subjectBn": "বাংলা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-13"
+  },
+  {
+   "day": "THU",
+   "period": 3,
+   "start": "09:30",
+   "end": "10:10",
+   "subjectId": "eng",
+   "subjectEn": "English",
+   "subjectBn": "ইংরেজি",
+   "room": "R-402",
+   "teacherId": "staff-teacher-18"
+  },
+  {
+   "day": "THU",
+   "period": 4,
+   "start": "10:20",
+   "end": "11:00",
+   "subjectId": "math",
+   "subjectEn": "Mathematics",
+   "subjectBn": "গণিত",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "THU",
+   "period": 5,
+   "start": "11:05",
+   "end": "11:45",
+   "subjectId": "psci",
+   "subjectEn": "Physical Science",
+   "subjectBn": "ভৌতবিজ্ঞান",
+   "room": "R-402",
+   "teacherId": "staff-teacher-04"
+  },
+  {
+   "day": "THU",
+   "period": 6,
+   "start": "11:50",
+   "end": "12:30",
+   "subjectId": "lsci",
+   "subjectEn": "Life Science",
+   "subjectBn": "জীবনবিজ্ঞান",
+   "room": "R-402",
+   "teacherId": "staff-teacher-21"
+  },
+  {
+   "day": "THU",
+   "period": 7,
+   "start": "13:00",
+   "end": "13:40",
+   "subjectId": "hist",
+   "subjectEn": "History",
+   "subjectBn": "ইতিহাস",
+   "room": "R-402",
+   "teacherId": "staff-teacher-10"
+  },
+  {
+   "day": "THU",
+   "period": 8,
+   "start": "13:45",
+   "end": "14:25",
+   "subjectId": "geo",
+   "subjectEn": "Geography",
+   "subjectBn": "ভূগোল",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "FRI",
+   "period": 1,
+   "start": "08:00",
+   "end": "08:40",
+   "subjectId": "math",
+   "subjectEn": "Mathematics",
+   "subjectBn": "গণিত",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "FRI",
+   "period": 2,
+   "start": "08:45",
+   "end": "09:25",
+   "subjectId": "psci",
+   "subjectEn": "Physical Science",
+   "subjectBn": "ভৌতবিজ্ঞান",
+   "room": "R-402",
+   "teacherId": "staff-teacher-12"
+  },
+  {
+   "day": "FRI",
+   "period": 3,
+   "start": "09:30",
+   "end": "10:10",
+   "subjectId": "lsci",
+   "subjectEn": "Life Science",
+   "subjectBn": "জীবনবিজ্ঞান",
+   "room": "R-402",
+   "teacherId": "staff-teacher-13"
+  },
+  {
+   "day": "FRI",
+   "period": 4,
+   "start": "10:20",
+   "end": "11:00",
+   "subjectId": "hist",
+   "subjectEn": "History",
+   "subjectBn": "ইতিহাস",
+   "room": "R-402",
+   "teacherId": "staff-teacher-10"
+  },
+  {
+   "day": "FRI",
+   "period": 5,
+   "start": "11:05",
+   "end": "11:45",
+   "subjectId": "geo",
+   "subjectEn": "Geography",
+   "subjectBn": "ভূগোল",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "FRI",
+   "period": 6,
+   "start": "11:50",
+   "end": "12:30",
+   "subjectId": "we",
+   "subjectEn": "Work Education",
+   "subjectBn": "কর্মশিক্ষা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-06"
+  },
+  {
+   "day": "FRI",
+   "period": 7,
+   "start": "13:00",
+   "end": "13:40",
+   "subjectId": "ben",
+   "subjectEn": "Bengali",
+   "subjectBn": "বাংলা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-13"
+  },
+  {
+   "day": "FRI",
+   "period": 8,
+   "start": "13:45",
+   "end": "14:25",
+   "subjectId": "eng",
+   "subjectEn": "English",
+   "subjectBn": "ইংরেজি",
+   "room": "R-402",
+   "teacherId": "staff-teacher-18"
+  },
+  {
+   "day": "SAT",
+   "period": 1,
+   "start": "08:00",
+   "end": "08:40",
+   "subjectId": "psci",
+   "subjectEn": "Physical Science",
+   "subjectBn": "ভৌতবিজ্ঞান",
+   "room": "R-402",
+   "teacherId": "staff-ananya"
+  },
+  {
+   "day": "SAT",
+   "period": 2,
+   "start": "08:45",
+   "end": "09:25",
+   "subjectId": "hist",
+   "subjectEn": "History",
+   "subjectBn": "ইতিহাস",
+   "room": "R-402",
+   "teacherId": "staff-teacher-22"
+  },
+  {
+   "day": "SAT",
+   "period": 3,
+   "start": "09:30",
+   "end": "10:10",
+   "subjectId": "geo",
+   "subjectEn": "Geography",
+   "subjectBn": "ভূগোল",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "SAT",
+   "period": 4,
+   "start": "10:20",
+   "end": "11:00",
+   "subjectId": "we",
+   "subjectEn": "Work Education",
+   "subjectBn": "কর্মশিক্ষা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-08"
+  },
+  {
+   "day": "SAT",
+   "period": 5,
+   "start": "11:05",
+   "end": "11:45",
+   "subjectId": "ben",
+   "subjectEn": "Bengali",
+   "subjectBn": "বাংলা",
+   "room": "R-402",
+   "teacherId": "staff-teacher-13"
+  },
+  {
+   "day": "SAT",
+   "period": 6,
+   "start": "11:50",
+   "end": "12:30",
+   "subjectId": "eng",
+   "subjectEn": "English",
+   "subjectBn": "ইংরেজি",
+   "room": "R-402",
+   "teacherId": "staff-teacher-20"
+  }
+ ],
+ "notices": [
+  {
+   "id": "notice-001",
+   "title": "Half-day today",
+   "bodyEn": "School will close at 12:30 pm today. Buses will leave at 12:45 pm.",
+   "bodyBn": "আজ দুপুর ১২:৩০-এ বিদ্যালয় ছুটি হবে। বাস ১২:৪৫-এ রওনা দেবে।",
+   "audience": "all",
+   "publishedBy": "staff-hm",
+   "publishedAt": "2026-10-31T07:10:00+05:30",
+   "status": "published"
+  },
+  {
+   "id": "notice-002",
+   "title": "Class IX exam forms due Monday",
+   "bodyEn": "Class IX students must submit the examination form by Monday, 2 November.",
+   "bodyBn": "নবম শ্রেণির শিক্ষার্থীদের সোমবার, ২ নভেম্বরের মধ্যে পরীক্ষার ফর্ম জমা দিতে হবে।",
+   "audience": "class",
+   "publishedBy": "staff-hm",
+   "publishedAt": "2026-10-30T15:30:00+05:30",
+   "status": "published"
+  },
+  {
+   "id": "notice-003",
+   "title": "Staff meeting",
+   "bodyEn": "A staff meeting will be held in the library at 3:30 pm today.",
+   "bodyBn": "আজ বিকেল ৩:৩০-এ লাইব্রেরিতে শিক্ষক-শিক্ষিকা সভা হবে।",
+   "audience": "teachers",
+   "publishedBy": "staff-hm",
+   "publishedAt": "2026-10-31T09:05:00+05:30",
+   "status": "published"
+  },
+  {
+   "id": "notice-004",
+   "title": "Fire drill",
+   "bodyEn": "A fire drill will take place on Tuesday at 11:00 am.",
+   "bodyBn": "মঙ্গলবার সকাল ১১টায় অগ্নিনির্বাপণ মহড়া হবে।",
+   "audience": "all",
+   "publishedBy": "staff-hm",
+   "publishedAt": "2026-10-29T12:00:00+05:30",
+   "status": "published"
+  },
+  {
+   "id": "notice-005",
+   "title": "Winter uniform from November",
+   "bodyEn": "Winter uniform is compulsory from 1 November.",
+   "bodyBn": "১ নভেম্বর থেকে শীতকালীন ইউনিফর্ম বাধ্যতামূলক।",
+   "audience": "all",
+   "publishedBy": "staff-hm",
+   "publishedAt": "2026-10-28T10:20:00+05:30",
+   "status": "published"
+  }
+ ],
+ "homework": [
+  {
+   "id": "hw-1",
+   "subjectId": "math",
+   "titleEn": "Exercise 7.2 — sums 1 to 10",
+   "titleBn": "অনুশীলনী ৭.২ — প্রশ্ন ১ থেকে ১০",
+   "assigned": "2026-11-02",
+   "due": "2026-11-03",
+   "done": false
+  },
+  {
+   "id": "hw-2",
+   "subjectId": "eng",
+   "titleEn": "Paragraph writing: My Village",
+   "titleBn": "প্যারাগ্রাফ: আমার গ্রাম",
+   "assigned": "2026-11-02",
+   "due": "2026-11-04",
+   "done": false
+  },
+  {
+   "id": "hw-3",
+   "subjectId": "psci",
+   "titleEn": "Worksheet 4 — elements and symbols",
+   "titleBn": "ওয়ার্কশিট ৪ — মৌল ও প্রতীক",
+   "assigned": "2026-11-02",
+   "due": "2026-11-03",
+   "done": false
+  },
+  {
+   "id": "hw-4",
+   "subjectId": "ben",
+   "titleEn": "Read poem: বীরপুরুষ",
+   "titleBn": "কবিতা পাঠ: বীরপুরুষ",
+   "assigned": "2026-11-01",
+   "due": "2026-11-05",
+   "done": false
+  },
+  {
+   "id": "hw-5",
+   "subjectId": "geo",
+   "titleEn": "Map work: rivers of Bengal",
+   "titleBn": "মানচিত্র: বাংলার নদী",
+   "assigned": "2026-10-30",
+   "due": "2026-11-06",
+   "done": false
+  },
+  {
+   "id": "hw-6",
+   "subjectId": "psci",
+   "titleEn": "Read chapter 4: Elements",
+   "titleBn": "অধ্যায় ৪ পাঠ: মৌল",
+   "assigned": "2026-10-29",
+   "due": "2026-11-02",
+   "done": true
+  },
+  {
+   "id": "hw-7",
+   "subjectId": "math",
+   "titleEn": "Exercise 6.4 — fractions",
+   "titleBn": "অনুশীলনী ৬.৪ — ভগ্নাংশ",
+   "assigned": "2026-10-28",
+   "due": "2026-11-01",
+   "done": true
+  },
+  {
+   "id": "hw-8",
+   "subjectId": "eng",
+   "titleEn": "Spelling practice list 5",
+   "titleBn": "বানান অভ্যাস — তালিকা ৫",
+   "assigned": "2026-10-27",
+   "due": "2026-10-31",
+   "done": true
+  }
+ ],
+ "coverageToday": {
+  "date": "2026-11-03",
+  "periods": [
+   {
+    "period": 1,
+    "subjectId": "math",
+    "room": "R-402",
+    "coveredEn": "Fractions: comparing unlike denominators — solved examples 3 and 4",
+    "coveredBn": "ভগ্নাংশ: অসম হরের তুলনা — উদাহরণ ৩ ও ৪ মীমাংসা"
+   },
+   {
+    "period": 2,
+    "subjectId": "psci",
+    "room": "Lab 2",
+    "coveredEn": "Elements and their symbols — group activity with the periodic table",
+    "coveredBn": "মৌল ও প্রতীক — পর্যায় সারণি নিয়ে দলগত কাজ"
+   },
+   {
+    "period": 3,
+    "subjectId": "eng",
+    "room": "R-105",
+    "coveredEn": "The Merchant of Venice — Act 2, scene 1 reading",
+    "coveredBn": "দ্য মার্চেন্ট অব ভেনিস — দ্বিতীয় অঙ্ক, দৃশ্য ১ পাঠ"
+   }
+  ]
+ },
+ "chapterProgress": [
+  {
+   "subjectId": "math",
+   "chapters": [
+    {
+     "nameEn": "Ch 5 Fractions",
+     "nameBn": "অধ্যায় ৫ ভগ্নাংশ",
+     "pct": 45
+    },
+    {
+     "nameEn": "Ch 6 Algebra",
+     "nameBn": "অধ্যায় ৬ বীজগণিত",
+     "pct": 10
+    }
+   ]
+  },
+  {
+   "subjectId": "psci",
+   "chapters": [
+    {
+     "nameEn": "Ch 4 Elements",
+     "nameBn": "অধ্যায় ৪ মৌল",
+     "pct": 80
+    }
+   ]
+  },
+  {
+   "subjectId": "eng",
+   "chapters": [
+    {
+     "nameEn": "Act 2 Merchant of Venice",
+     "nameBn": "মার্চেন্ট অব ভেনিস অঙ্ক ২",
+     "pct": 60
+    }
+   ]
+  }
+ ],
+ "examSyllabus": {
+  "examId": "exam-half-2026",
+  "items": [
+   {
+    "titleEn": "Fractions and decimals",
+    "titleBn": "ভগ্নাংশ ও দশমিক",
+    "done": true
+   },
+   {
+    "titleEn": "Algebra basics",
+    "titleBn": "বীজগণিতের প্রাথমিক ধারণা",
+    "done": true
+   },
+   {
+    "titleEn": "Elements and symbols",
+    "titleBn": "মৌল ও প্রতীক",
+    "done": true
+   },
+   {
+    "titleEn": "Geometry basics",
+    "titleBn": "জ্যামিতির প্রাথমিক ধারণা",
+    "done": false
+   },
+   {
+    "titleEn": "Reading comprehension",
+    "titleBn": "পঠন সমকোষ",
+    "done": false
+   }
+  ]
+ },
+ "scoreTrend": [
+  {
+   "label": "UT 1",
+   "pct": 62
+  },
+  {
+   "label": "UT 2",
+   "pct": 70
+  },
+  {
+   "label": "Midterm",
+   "pct": 66
+  },
+  {
+   "label": "UT 3",
+   "pct": 74
+  },
+  {
+   "label": "Half-Yearly",
+   "pct": 78
+  }
+ ]
+}

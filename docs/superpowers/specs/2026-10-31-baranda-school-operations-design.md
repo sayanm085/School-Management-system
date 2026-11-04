@@ -674,7 +674,9 @@ The generated files are committed and checked for drift. Hand-editing generated 
 
 ### 9.5 Future backend (not in this build)
 
-- PostgreSQL with Drizzle ORM; modular monolith; per-school tenancy.
+The backend architecture is now specified in `docs/superpowers/specs/2026-10-31-backend-architecture.md`, with the first executable milestone in `docs/superpowers/plans/2026-10-31-backend-foundation.md`.
+
+- PostgreSQL with Drizzle ORM; NestJS modular monolith; per-school tenancy.
 - Authentication with phone OTP and password, MFA for Headmaster/Clerk; hashed passwords; session rotation.
 - Object storage for documents and photos; signed URLs; consent flags.
 - Audit log, background jobs (Redis/BullMQ) for notifications and exports.

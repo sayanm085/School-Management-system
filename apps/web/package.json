@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "api:types": "openapi-typescript ../api/openapi.json -o src/lib/api/generated.d.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "e2e": "playwright test"
@@ -63,6 +64,7 @@
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.3",
     "jsdom": "^30.1.3",
+    "openapi-typescript": "^7.13.0",
     "postcss": "^8.5.32",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",

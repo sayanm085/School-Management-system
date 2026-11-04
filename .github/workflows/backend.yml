@@ -1,0 +1,105 @@
+name: backend
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: baranda
+          POSTGRES_PASSWORD: baranda
+          POSTGRES_DB: baranda
+        ports:
+          - "5432:5432"
+        options: >-
+          --health-cmd "pg_isready -U baranda -d baranda"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+      redis:
+        image: redis:7
+        ports:
+          - "6379:6379"
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql://baranda:baranda@localhost:5432/baranda_api
+      TEST_DATABASE_URL: postgresql://baranda:baranda@localhost:5432/baranda_test
+      REDIS_URL: redis://localhost:6379
+      JWT_ACCESS_SECRET: ci-access-secret-not-used-outside-pipeline-0123456789
+      JWT_REFRESH_PEPPER: ci-refresh-pepper-not-used-outside-pipeline-0123456789
+      MFA_ENCRYPTION_KEY: Y2ktbWZhLWVuY3J5cHRpb24ta2V5LXRodXJ0eS10d28tYg==
+      WEB_ORIGIN: http://localhost:3001
+      DEMO_PASSWORD: ci-demo-password
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apps/api/package-lock.json
+      - name: Create test databases
+        run: |
+          psql "$DATABASE_URL" -v ON_ERROR_STOP=0 -c 'select 1' >/dev/null
+          createdb baranda_api || true
+          createdb baranda_test || true
+        env:
+          PGHOST: localhost
+          PGPORT: "5432"
+          PGUSER: baranda
+          PGPASSWORD: baranda
+      - run: npm ci
+        working-directory: apps/api
+      - run: npm run typecheck
+        working-directory: apps/api
+      - run: npm test
+        working-directory: apps/api
+      - name: Migrations and seed apply from an empty database
+        run: |
+          dropdb --if-exists baranda_ci
+          createdb baranda_ci
+          export DATABASE_URL=postgresql://baranda:baranda@localhost:5432/baranda_ci
+          npm run db:migrate
+          npm run db:seed
+        working-directory: apps/api
+        env:
+          PGHOST: localhost
+          PGPORT: "5432"
+          PGUSER: baranda
+          PGPASSWORD: baranda
+      - name: OpenAPI contract is committed and current
+        run: |
+          npm run openapi:generate
+          git diff --exit-code -- apps/api/openapi.json
+        working-directory: apps/api
+      - name: Container build
+        run: docker build -t baranda-api:ci apps/api
+
+  web-types:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - run: npm ci
+        working-directory: apps/web
+      - run: npm run api:types
+        working-directory: apps/web
+      - run: git diff --exit-code -- apps/web/src/lib/api/generated.d.ts
+      - run: npx tsc --noEmit
+        working-directory: apps/web
