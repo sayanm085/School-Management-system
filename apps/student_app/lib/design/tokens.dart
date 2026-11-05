@@ -95,3 +95,18 @@ abstract final class AppMotion {
   static const durationSlow = Duration(milliseconds: 300);
   static const durationDrawer = Duration(milliseconds: 500);
 }
+
+/// Student-app extension: Apple's extended system palette for subject identity.
+/// Same contract as AppColors — light tints paired with strong foregrounds.
+abstract final class StudentColors {
+  static const teal = Color(0xFF0A7EA4);
+  static const tealTint = Color(0xFFE0F4F8);
+  static const indigo = Color(0xFF5856D6);
+  static const indigoTint = Color(0xFFECEBFC);
+  static const purple = Color(0xFF8E44AD);
+  static const purpleTint = Color(0xFFF3EBFA);
+  static const pink = Color(0xFFD6336C);
+  static const pinkTint = Color(0xFFFBEBF1);
+  static const mint = Color(0xFF0F9D76);
+  static const mintTint = Color(0xFFE3F7F0);
+}

@@ -4,6 +4,7 @@ import '../../data/demo_store.dart';
 import '../../data/models.dart';
 import '../../design/tokens.dart';
 import '../../design/theme.dart';
+import '../../l10n/strings.dart';
 import '../../widgets/common.dart';
 import '../../widgets/pressable.dart';
 import '../tutor/tutor_screen.dart';
@@ -13,11 +14,22 @@ class SyllabusScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: languageNotifier,
+      builder: (context, _) => _build(context),
+    );
+  }
+
+  Widget _build(BuildContext context) {
+    final t = T.of(currentLang);
     final data = DemoStore.instance.data;
     final doneCount = data.examSyllabus.where((s) => s.done).length;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Syllabus · সিলেবাস')),
+      appBar: AppBar(
+          title: Text(currentLang == AppLang.en
+              ? 'Syllabus · সিলেবাস'
+              : t.syllabus)),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 4, 20, 32),
         children: [
@@ -25,7 +37,10 @@ class SyllabusScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SectionHeader(title: "Today's classes · আজকের ক্লাস"),
+                SectionHeader(
+                  title: currentLang == AppLang.en
+                      ? "Today's classes · আজকের ক্লাস"
+                      : t.todaysClasses),
                 const SizedBox(height: 16),
                 for (var i = 0; i < data.coverageToday.length; i++)
                   _TimelineRow(
@@ -42,7 +57,10 @@ class SyllabusScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SectionHeader(title: 'Chapter progress · অধ্যায়'),
+                SectionHeader(
+                  title: currentLang == AppLang.en
+                      ? 'Chapter progress · অধ্যায়'
+                      : t.chapterProgress),
                 const SizedBox(height: 16),
                 for (final sp in data.chapterProgress)
                   for (final c in sp.chapters)
@@ -54,7 +72,7 @@ class SyllabusScreen extends StatelessWidget {
                           Row(
                             children: [
                               Expanded(
-                                child: Text(c.nameEn,
+                                child: Text(currentLang == AppLang.en ? c.nameEn : c.nameBn,
                                     style: latinText(size: 15, weight: FontWeight.w600)),
                               ),
                               Text('${c.pct}%',
@@ -74,9 +92,12 @@ class SyllabusScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SectionHeader(title: 'Exam syllabus · পরীক্ষার সিলেবাস'),
+                SectionHeader(
+                    title: currentLang == AppLang.en
+                        ? 'Exam syllabus · পরীক্ষার সিলেবাস'
+                        : t.examSyllabus),
                 const SizedBox(height: 4),
-                Text('$doneCount of ${data.examSyllabus.length} topics done',
+                Text(t.topicsDone(doneCount, data.examSyllabus.length),
                     style: latinText(size: 13, color: AppColors.inkTertiary)),
                 const SizedBox(height: 12),
                 for (final s in data.examSyllabus)
@@ -104,7 +125,7 @@ class SyllabusScreen extends StatelessWidget {
                         const SizedBox(width: 12),
                         Expanded(
                           child: Text(
-                            s.titleEn,
+                            currentLang == AppLang.en ? s.titleEn : s.titleBn,
                             style: latinText(
                               size: 16,
                               color: s.done ? AppColors.ink : AppColors.inkSecondary,
@@ -142,7 +163,9 @@ class SyllabusScreen extends StatelessWidget {
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
-                      "Didn't understand today's lesson? Ask Shikha · আজকের পাঠ বুঝি নি? শিখাকে জিজ্ঞাসা করো",
+                      currentLang == AppLang.en
+                          ? "Didn't understand today's lesson? Ask Shikha"
+                          : t.askShikha,
                       style: bnText(size: 14, weight: FontWeight.w600),
                     ),
                   ),
@@ -216,19 +239,20 @@ class _TimelineRow extends StatelessWidget {
                   Row(
                     children: [
                       Expanded(
-                        child: Text('$subjectEn · ${coverage.room}',
+                        child: Text(
+                            '${currentLang == AppLang.en ? subjectEn : (period?.subjectBn ?? coverage.subjectId)} · ${coverage.room}',
                             style: latinText(size: 14, weight: FontWeight.w700)),
                       ),
                       if (index == 1)
                         TintPill(
-                          label: 'Live · চলছে',
+                          label: currentLang == AppLang.en ? 'Live · চলছে' : T.of(currentLang).live,
                           background: AppColors.orangeTint,
                           foreground: AppColors.orangeStrong,
                         ),
                     ],
                   ),
                   const SizedBox(height: 4),
-                  Text(coverage.coveredEn,
+                  Text(currentLang == AppLang.en ? coverage.coveredEn : coverage.coveredBn,
                       style: latinText(size: 13, color: AppColors.inkSecondary)),
                 ],
               ),

@@ -4,6 +4,7 @@ import '../../data/demo_store.dart';
 import '../../data/models.dart';
 import '../../design/tokens.dart';
 import '../../design/theme.dart';
+import '../../l10n/strings.dart';
 import '../../widgets/common.dart';
 import '../../widgets/pressable.dart';
 
@@ -12,6 +13,14 @@ class MarksScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: languageNotifier,
+      builder: (context, _) => _build(context),
+    );
+  }
+
+  Widget _build(BuildContext context) {
+    final t = T.of(currentLang);
     final data = DemoStore.instance.data;
     final marks = data.marks.toList()
       ..sort((a, b) => b.pct.compareTo(a.pct));
@@ -21,7 +30,9 @@ class MarksScreen extends StatelessWidget {
       child: ListView(
         padding: const EdgeInsets.fromLTRB(20, 12, 20, 120),
         children: [
-          const LargeTitle(title: 'Performance', subtitleBn: 'পারফরম্যান্স'),
+          LargeTitle(
+            title: currentLang == AppLang.en ? 'Performance · পারফরম্যান্স' : t.performance,
+            subtitleBn: null),
           const SizedBox(height: 16),
           _TermControl(),
           const SizedBox(height: 16),
@@ -31,7 +42,8 @@ class MarksScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SectionHeader(title: 'Score trend · স্কোর'),
+                  SectionHeader(
+                    title: currentLang == AppLang.en ? 'Score trend · স্কোর' : t.scoreTrend),
                   const SizedBox(height: 12),
                   TrendChart(points: data.scoreTrend),
                 ],
@@ -45,7 +57,8 @@ class MarksScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SectionHeader(title: 'Subjects · বিষয়'),
+                  SectionHeader(
+                    title: currentLang == AppLang.en ? 'Subjects · বিষয়' : t.subjects),
                   const SizedBox(height: 16),
                   for (var i = 0; i < marks.length; i++) ...[
                     _SubjectRow(mark: marks[i]),
@@ -62,7 +75,8 @@ class MarksScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SectionHeader(title: 'Mock tests · মক টেস্ট'),
+                  SectionHeader(
+                    title: currentLang == AppLang.en ? 'Mock tests · মক টেস্ট' : t.mockTests),
                   const SizedBox(height: 16),
                   Row(
                     children: [
@@ -104,12 +118,13 @@ class _TermControl extends StatelessWidget {
                   BoxShadow(color: Color(0x14000000), blurRadius: 8, offset: Offset(0, 2)),
                 ],
               ),
-              child: Text('Half-Yearly', style: latinText(size: 14, weight: FontWeight.w700)),
+              child: Text(T.of(currentLang).halfYearly,
+                  style: latinText(size: 14, weight: FontWeight.w700)),
             ),
           ),
           Expanded(
             child: Center(
-              child: Text('Annual',
+              child: Text(T.of(currentLang).annual,
                   style: latinText(size: 14, weight: FontWeight.w500, color: AppColors.inkSecondary)),
             ),
           ),
@@ -187,13 +202,13 @@ class _MockTile extends StatelessWidget {
           const SizedBox(height: 4),
           if (weak)
             TintPill(
-              label: 'Practice suggested',
+              label: currentLang == AppLang.en ? 'Practice suggested' : T.of(currentLang).practiceSuggested,
               background: AppColors.orangeTint,
               foreground: AppColors.orangeStrong,
             )
           else
             TintPill(
-              label: 'Good going',
+              label: currentLang == AppLang.en ? 'Good going' : T.of(currentLang).goodGoing,
               background: AppColors.greenTint,
               foreground: AppColors.greenText,
             ),

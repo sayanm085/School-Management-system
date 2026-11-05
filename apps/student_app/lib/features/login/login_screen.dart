@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../data/demo_store.dart';
 import '../../design/tokens.dart';
 import '../../design/theme.dart';
-import '../../widgets/common.dart';
+import '../../l10n/strings.dart';
 import '../../widgets/pressable.dart';
 import '../home/home_shell.dart';
 
@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Future<void> _submit() async {
     final store = DemoStore.instance;
     if (!store.login(_id.text, _password.text)) {
-      setState(() => _error = 'Wrong Student ID or password · ভুল আইডি বা পাসওয়ার্ড');
+      setState(() => _error = T.of(currentLang).wrongCreds);
       return;
     }
     setState(() {
@@ -49,30 +49,36 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 440),
-            child: ListView(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
-              shrinkWrap: true,
+    return ListenableBuilder(
+      listenable: languageNotifier,
+      builder: (context, _) {
+        final t = T.of(currentLang);
+        return Scaffold(
+          body: SafeArea(
+            child: Stack(
               children: [
-                const SizedBox(height: 40),
-                const _Seal(size: 72),
-                const SizedBox(height: 16),
                 Center(
-                  child: Text('Baranda',
-                      style: latinText(size: 30, weight: FontWeight.w800, letterSpacing: -0.8)),
-                ),
-                const SizedBox(height: 4),
-                Center(
-                  child: Text('শিক্ষার্থী অ্যাপ · Student App',
-                      style: bnText(size: 15, color: AppColors.inkSecondary)),
-                ),
-                const SizedBox(height: 48),
-                Text('Log in', style: latinText(size: 30, weight: FontWeight.w800, letterSpacing: -0.8)),
-                const SizedBox(height: 16),
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 440),
+                    child: ListView(
+                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+                      shrinkWrap: true,
+                      children: [
+                        const SizedBox(height: 28),
+                        const _Seal(size: 76),
+                        const SizedBox(height: 16),
+                        Center(
+                          child: Text('Baranda',
+                              style: latinText(size: 30, weight: FontWeight.w800, letterSpacing: -0.8)),
+                        ),
+                        const SizedBox(height: 4),
+                        Center(
+                          child: Text(t.appSubtitle,
+                              style: bnText(size: 15, color: AppColors.inkSecondary)),
+                        ),
+                        const SizedBox(height: 40),
+                        Text(t.logIn, style: latinText(size: 30, weight: FontWeight.w800, letterSpacing: -0.8)),
+                        const SizedBox(height: 16),
                 Container(
                   decoration: BoxDecoration(
                     color: AppColors.surface,
@@ -86,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Student ID',
+                            Text(t.studentId,
                                 style: latinText(size: 15, color: AppColors.inkSecondary)),
                             const SizedBox(height: 4),
                             TextField(
@@ -111,7 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Password',
+                            Text(t.password,
                                 style: latinText(size: 15, color: AppColors.inkSecondary)),
                             const SizedBox(height: 4),
                             Row(
@@ -170,34 +176,78 @@ class _LoginScreenState extends State<LoginScreen> {
                               valueColor: AlwaysStoppedAnimation(Colors.white),
                             ),
                           )
-                        : Text('Log in · লগ ইন',
+                        : Text('${t.logIn} · লগ ইন',
                             style: bnText(size: 17, weight: FontWeight.w700, color: Colors.white)),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Pressable(
+                  onTap: _busy
+                      ? null
+                      : () {
+                          _id.text = DemoStore.demoStudentId;
+                          _password.text = DemoStore.demoPassword;
+                          _submit();
+                        },
+                  child: Container(
+                    height: 50,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: AppColors.blueTint,
+                      borderRadius: BorderRadius.circular(AppRadius.full),
+                      border: Border.all(color: AppColors.separator),
+                    ),
+                    child: Text('⚡ ${t.demoTry}',
+                        style: bnText(size: 15, weight: FontWeight.w700, color: AppColors.blue)),
                   ),
                 ),
                 const SizedBox(height: 16),
                 Center(
                   child: Text(
-                    'Use the ID given by your school · স্কুল দেওয়া আইডি ব্যবহার করুন',
+                    t.useSchoolId,
                     textAlign: TextAlign.center,
                     style: bnText(size: 14, color: AppColors.inkTertiary),
                   ),
                 ),
-                const SizedBox(height: 12),
-                Center(
-                  child: TintPill(
-                    label: 'Demo · $DemoStore.demoStudentId / ${DemoStore.demoPassword}',
-                    background: AppColors.orangeTint,
-                    foreground: AppColors.orangeStrong,
-                  ),
-                ),
-                const SizedBox(height: 40),
+                const SizedBox(height: 32),
                 Center(
                   child: Text('Baranda Vidyapith · WB-NAB-001',
                       style: latinText(size: 13, color: AppColors.inkTertiary)),
                 ),
+                const SizedBox(height: 12),
               ],
             ),
           ),
+                ),
+                const Positioned(top: 8, right: 16, child: _LangToggle()),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _LangToggle extends StatelessWidget {
+  const _LangToggle();
+
+  @override
+  Widget build(BuildContext context) {
+    return Pressable(
+      onTap: () => languageNotifier.value =
+          currentLang == AppLang.en ? AppLang.bn : AppLang.en,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+        decoration: BoxDecoration(
+          color: AppColors.surface,
+          borderRadius: BorderRadius.circular(AppRadius.full),
+          border: Border.all(color: AppColors.separator),
+          boxShadow: cardShadow,
+        ),
+        child: Text(
+          currentLang == AppLang.en ? 'বাংলা' : 'English',
+          style: latinText(size: 13, weight: FontWeight.w700, color: AppColors.blue),
         ),
       ),
     );

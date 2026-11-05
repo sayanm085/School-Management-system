@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../data/demo_store.dart';
 import '../../design/tokens.dart';
 import '../../design/theme.dart';
+import '../../l10n/strings.dart';
 import '../../widgets/common.dart';
 import '../../widgets/pressable.dart';
 import '../login/login_screen.dart';
@@ -12,6 +13,14 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: languageNotifier,
+      builder: (context, _) => _build(context),
+    );
+  }
+
+  Widget _build(BuildContext context) {
+    final t = T.of(currentLang);
     final data = DemoStore.instance.data;
     final s = data.student;
     final bill = data.currentBill;
@@ -21,7 +30,9 @@ class ProfileScreen extends StatelessWidget {
       child: ListView(
         padding: const EdgeInsets.fromLTRB(20, 12, 20, 120),
         children: [
-          const LargeTitle(title: 'Profile', subtitleBn: 'প্রোফাইল'),
+          LargeTitle(
+            title: currentLang == AppLang.en ? 'Profile' : 'প্রোফাইল',
+            subtitleBn: currentLang == AppLang.en ? 'প্রোফাইল' : null),
           const SizedBox(height: 16),
           StaggerIn(
             index: 0,
@@ -63,13 +74,13 @@ class ProfileScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
               child: Column(
                 children: [
-                  _Row(label: 'Student ID', value: s.studentId),
+                  _Row(label: t.studentId, value: s.studentId),
                   const Divider(height: 1),
-                  _Row(label: 'Admission no.', value: s.admissionNo),
+                  _Row(label: t.admissionNo, value: s.admissionNo),
                   const Divider(height: 1),
-                  _Row(label: 'Guardian · অভিভাবক', value: s.guardianName, bn: true),
+                  _Row(label: t.guardian, value: s.guardianName, bn: true),
                   const Divider(height: 1),
-                  _Row(label: 'Guardian phone', value: s.guardianPhoneMasked),
+                  _Row(label: t.guardianPhone, value: s.guardianPhoneMasked),
                 ],
               ),
             ),
@@ -81,10 +92,11 @@ class ProfileScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SectionHeader(title: 'Fees · ফি'),
+                  SectionHeader(
+                    title: currentLang == AppLang.en ? 'Fees · ফি' : t.fees),
                   const SizedBox(height: 10),
                   if (bill == null)
-                    Text('No bills this session · এই বছর বিল নেই',
+                    Text(t.noBills,
                         style: bnText(size: 14, color: AppColors.inkTertiary))
                   else
                     Column(
@@ -111,8 +123,8 @@ class ProfileScreen extends StatelessWidget {
                             ),
                             TintPill(
                               label: bill.isPaid
-                                  ? 'Paid ✓'
-                                  : 'Due ₹ ${(bill.duePaise / 100).toStringAsFixed(0)} · ${bill.dueDate}',
+                                  ? t.paid
+                                  : '${t.due} ₹ ${(bill.duePaise / 100).toStringAsFixed(0)} · ${bill.dueDate}',
                               background: bill.isPaid ? AppColors.greenTint : AppColors.orangeTint,
                               foreground: bill.isPaid ? AppColors.greenText : AppColors.orangeStrong,
                             ),
@@ -133,20 +145,22 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   _ActionRow(
                     icon: Icons.campaign_outlined,
-                    label: 'Notices · নোটিশ',
-                    detail: '${data.notices.length} recent',
+                    label: currentLang == AppLang.en ? 'Notices · নোটিশ' : t.notices,
+                    detail: '${data.notices.length}',
                   ),
                   const Divider(height: 1),
-                  const _ActionRow(
+                  _ActionRow(
                     icon: Icons.translate,
-                    label: 'Language · ভাষা',
-                    detail: 'Bengali + English',
+                    label: currentLang == AppLang.en ? 'Language · ভাষা' : t.language,
+                    detail: currentLang == AppLang.en ? 'বাংলা' : 'English',
+                    onTap: () => languageNotifier.value =
+                        currentLang == AppLang.en ? AppLang.bn : AppLang.en,
                   ),
                   const Divider(height: 1),
-                  const _ActionRow(
+                  _ActionRow(
                     icon: Icons.info_outline,
                     label: 'Baranda Vidyapith',
-                    detail: 'Demo mode',
+                    detail: t.demoMode,
                   ),
                 ],
               ),
@@ -167,7 +181,7 @@ class ProfileScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(AppRadius.full),
                   border: Border.all(color: AppColors.separator),
                 ),
-                child: Text('Log out · লগ আউট',
+                child: Text(currentLang == AppLang.en ? 'Log out · লগ আউট' : t.logOut,
                     style: bnText(size: 16, weight: FontWeight.w600, color: AppColors.redText)),
               ),
             ),
@@ -205,16 +219,21 @@ class _ActionRow extends StatelessWidget {
   final IconData icon;
   final String label;
   final String detail;
+  final VoidCallback? onTap;
   const _ActionRow({
     required this.icon,
     required this.label,
     required this.detail,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6),
+      child: GestureDetector(
+      onTap: onTap,
+      behavior: HitTestBehavior.opaque,
       child: Row(
         children: [
           Icon(icon, size: 22, color: AppColors.inkSecondary),
@@ -224,6 +243,7 @@ class _ActionRow extends StatelessWidget {
           const SizedBox(width: 4),
           const Icon(Icons.chevron_right, color: AppColors.inkTertiary, size: 20),
         ],
+      ),
       ),
     );
   }

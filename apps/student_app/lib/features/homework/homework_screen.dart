@@ -4,6 +4,8 @@ import '../../data/demo_store.dart';
 import '../../data/models.dart';
 import '../../design/tokens.dart';
 import '../../design/theme.dart';
+import '../../design/subjects.dart';
+import '../../l10n/strings.dart';
 import '../../widgets/common.dart';
 import '../../widgets/pressable.dart';
 import '../tutor/tutor_screen.dart';
@@ -15,14 +17,8 @@ class HomeworkScreen extends StatefulWidget {
   State<HomeworkScreen> createState() => _HomeworkScreenState();
 }
 
-class _Segment {
-  final String label;
-  const _Segment(this.label);
-}
-
 class _HomeworkScreenState extends State<HomeworkScreen> {
   int _segment = 0;
-  static const _segments = [_Segment('Due today'), _Segment('This week'), _Segment('Done')];
 
   static const _today = '2026-11-03';
   static const _weekEnd = '2026-11-09';
@@ -49,6 +45,14 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
 
   @override
   Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: languageNotifier,
+      builder: (context, _) => _build(context),
+    );
+  }
+
+  Widget _build(BuildContext context) {
+    final t = T.of(currentLang);
     final data = DemoStore.instance.data;
     final items = _bucket();
     return SafeArea(
@@ -56,10 +60,12 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
       child: ListView(
         padding: const EdgeInsets.fromLTRB(20, 12, 20, 120),
         children: [
-          const LargeTitle(title: 'Homework', subtitleBn: 'হোমওয়ার্ক'),
+          LargeTitle(
+            title: currentLang == AppLang.en ? 'Homework' : 'হোমওয়ার্ক',
+            subtitleBn: currentLang == AppLang.en ? 'হোমওয়ার্ক' : null),
           const SizedBox(height: 16),
           _SegmentedControl(
-            segments: _segments.map((s) => s.label).toList(),
+            segments: [t.dueToday, t.thisWeek, t.done],
             index: _segment,
             onChanged: (i) => setState(() => _segment = i),
           ),
@@ -70,7 +76,9 @@ class _HomeworkScreenState extends State<HomeworkScreen> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 24),
                   child: Text(
-                    _segment == 2 ? 'Nothing done yet · এখনো হয়নি' : 'All clear · সব ঠিক আছে',
+                    currentLang == AppLang.en
+                        ? (_segment == 2 ? 'Nothing done yet' : 'All clear')
+                        : (_segment == 2 ? t.nothingDone : t.allClear),
                     style: bnText(size: 15, color: AppColors.inkTertiary),
                   ),
                 ),
@@ -154,12 +162,13 @@ class _HomeworkCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final en = currentLang == AppLang.en;
     final dueLabel = item.due == '2026-11-03'
-        ? 'Due today · আজ'
+        ? (en ? 'Due today · আজ' : 'আজ')
         : item.due == '2026-11-04'
-            ? 'Tomorrow · কাল'
+            ? (en ? 'Tomorrow · কাল' : 'কাল')
             : item.done
-                ? 'Done · সম্পন্ন'
+                ? (en ? 'Done · সম্পন্ন' : 'সম্পন্ন')
                 : item.due;
     final (bg, fg) = item.done
         ? (AppColors.greenTint, AppColors.greenText)
@@ -175,10 +184,11 @@ class _HomeworkCard extends StatelessWidget {
             width: 44,
             height: 44,
             decoration: BoxDecoration(
-              color: AppColors.blueTint,
+              color: subjectColors(item.subjectId).tint,
               borderRadius: BorderRadius.circular(AppRadius.md),
             ),
-            child: const Icon(Icons.menu_book_outlined, color: AppColors.blue, size: 22),
+            child: Icon(subjectIcon(item.subjectId),
+                color: subjectColors(item.subjectId).strong, size: 22),
           ),
           const SizedBox(width: 14),
           Expanded(
@@ -246,14 +256,14 @@ class _CoveredTodayCard extends StatelessWidget {
               const Icon(Icons.auto_stories_outlined, color: AppColors.blue, size: 22),
               const SizedBox(width: 10),
               Expanded(
-                child: Text('Covered today · আজ কভার হয়েছে',
+                child: Text(currentLang == AppLang.en ? 'Covered today · আজ কভার হয়েছে' : T.of(currentLang).coveredToday,
                     style: bnText(size: 15, weight: FontWeight.w700)),
               ),
             ],
           ),
           const SizedBox(height: 12),
           if (coverage.isEmpty)
-            Text('School day not started yet · স্কুল এখনো শুরু হয়নি',
+            Text(currentLang == AppLang.en ? 'School day not started yet' : T.of(currentLang).notStarted,
                 style: bnText(size: 14, color: AppColors.inkSecondary))
           else
             for (final c in coverage)
@@ -265,7 +275,8 @@ class _CoveredTodayCard extends StatelessWidget {
                     Text('P${c.period}', style: latinText(size: 13, weight: FontWeight.w700, color: AppColors.blue)),
                     const SizedBox(width: 10),
                     Expanded(
-                      child: Text(c.coveredBn, style: bnText(size: 14, color: AppColors.inkSecondary)),
+                      child: Text(currentLang == AppLang.en ? c.coveredEn : c.coveredBn,
+                        style: bnText(size: 14, color: AppColors.inkSecondary)),
                     ),
                   ],
                 ),
@@ -283,7 +294,7 @@ class _CoveredTodayCard extends StatelessWidget {
                   color: AppColors.surface,
                   borderRadius: BorderRadius.circular(AppRadius.full),
                 ),
-                child: Text('Ask the Tutor',
+                child: Text(T.of(currentLang).askTheTutor,
                     style: latinText(size: 14, weight: FontWeight.w700, color: AppColors.blue)),
               ),
             ),

@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../../design/tokens.dart';
 import '../../design/theme.dart';
+import '../../l10n/strings.dart';
 import '../home/home_screen.dart';
 import '../homework/homework_screen.dart';
 import '../marks/marks_screen.dart';
 import '../profile/profile_screen.dart';
 import '../tutor/tutor_screen.dart';
 
-/// Five tabs, never varying: Home · Homework · Tutor · Marks · Profile.
+/// Five tabs, never varying. The shell listens to the language notifier so a
+/// switch rebuilds every tab in place.
 class HomeShell extends StatefulWidget {
   const HomeShell({super.key});
 
@@ -27,42 +29,42 @@ class _HomeShellState extends State<HomeShell> {
     ProfileScreen(),
   ];
 
-  static const _tabs = [
-    _TabSpec(icon: Icons.home_outlined, activeIcon: Icons.home, label: 'Home'),
-    _TabSpec(
-        icon: Icons.checklist_outlined,
-        activeIcon: Icons.checklist,
-        label: 'Homework'),
-    _TabSpec(
-        icon: Icons.school_outlined, activeIcon: Icons.school, label: 'Tutor'),
-    _TabSpec(
-        icon: Icons.bar_chart_outlined, activeIcon: Icons.bar_chart, label: 'Marks'),
-    _TabSpec(
-        icon: Icons.person_outlined, activeIcon: Icons.person, label: 'Profile'),
-  ];
+  List<_TabSpec> _tabs(T t) => [
+        _TabSpec(Icons.home_outlined, Icons.home, t.home),
+        _TabSpec(Icons.checklist_outlined, Icons.checklist, t.homework),
+        _TabSpec(Icons.school_outlined, Icons.school, t.tutor),
+        _TabSpec(Icons.bar_chart_outlined, Icons.bar_chart, t.marks),
+        _TabSpec(Icons.person_outlined, Icons.person, t.profile),
+      ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBody: true,
-      body: AnimatedSwitcher(
-        duration: AppMotion.durationFast,
-        switchInCurve: AppMotion.easeOut,
-        switchOutCurve: AppMotion.easeOut,
-        transitionBuilder: (child, animation) => FadeTransition(
-          opacity: animation,
-          child: child,
-        ),
-        child: KeyedSubtree(
-          key: ValueKey(_index),
-          child: _screens[_index],
-        ),
-      ),
-      bottomNavigationBar: _TabBar(
-        tabs: _tabs,
-        index: _index,
-        onChanged: (i) => setState(() => _index = i),
-      ),
+    return ListenableBuilder(
+      listenable: languageNotifier,
+      builder: (context, _) {
+        final t = T.of(currentLang);
+        return Scaffold(
+          extendBody: true,
+          body: AnimatedSwitcher(
+            duration: AppMotion.durationFast,
+            switchInCurve: AppMotion.easeOut,
+            switchOutCurve: AppMotion.easeOut,
+            transitionBuilder: (child, animation) => FadeTransition(
+              opacity: animation,
+              child: child,
+            ),
+            child: KeyedSubtree(
+              key: ValueKey('$_index-${currentLang.name}'),
+              child: _screens[_index],
+            ),
+          ),
+          bottomNavigationBar: _TabBar(
+            tabs: _tabs(t),
+            index: _index,
+            onChanged: (i) => setState(() => _index = i),
+          ),
+        );
+      },
     );
   }
 }
@@ -71,48 +73,47 @@ class _TabSpec {
   final IconData icon;
   final IconData activeIcon;
   final String label;
-  const _TabSpec({
-    required this.icon,
-    required this.activeIcon,
-    required this.label,
-  });
+  const _TabSpec(this.icon, this.activeIcon, this.label);
 }
 
+/// Floating translucent pill pinned to the bottom. The container sizes itself;
+/// a Center here would expand into the whole bottom slot and float mid-screen.
 class _TabBar extends StatelessWidget {
   final List<_TabSpec> tabs;
   final int index;
   final ValueChanged<int> onChanged;
-  const _TabBar({required this.tabs, required this.index, required this.onChanged});
+  const _TabBar({
+    required this.tabs,
+    required this.index,
+    required this.onChanged,
+  });
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       top: false,
-      child: Center(
-        child: Container(
-          margin: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-          decoration: BoxDecoration(
-            color: AppColors.glassStrong,
-            borderRadius: BorderRadius.circular(AppRadius.full),
-            border: Border.all(color: AppColors.separator),
-            boxShadow: const [
-              BoxShadow(color: Color(0x14000000), blurRadius: 24, offset: Offset(0, 8)),
-            ],
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              for (var i = 0; i < tabs.length; i++)
-                Expanded(
-                  child: _TabItem(
-                    spec: tabs[i],
-                    active: i == index,
-                    onTap: () => onChanged(i),
-                  ),
+      child: Container(
+        margin: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+        decoration: BoxDecoration(
+          color: AppColors.glassStrong,
+          borderRadius: BorderRadius.circular(AppRadius.full),
+          border: Border.all(color: AppColors.separator),
+          boxShadow: const [
+            BoxShadow(color: Color(0x14000000), blurRadius: 24, offset: Offset(0, 8)),
+          ],
+        ),
+        child: Row(
+          children: [
+            for (var i = 0; i < tabs.length; i++)
+              Expanded(
+                child: _TabItem(
+                  spec: tabs[i],
+                  active: i == index,
+                  onTap: () => onChanged(i),
                 ),
-            ],
-          ),
+              ),
+          ],
         ),
       ),
     );
@@ -146,19 +147,29 @@ class _TabItem extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            AnimatedSwitcher(
+            AnimatedScale(
+              scale: active ? 1.12 : 1.0,
               duration: AppMotion.durationPress,
-              switchInCurve: AppMotion.easeOut,
-              child: Icon(
-                active ? spec.activeIcon : spec.icon,
-                key: ValueKey(active),
-                color: color,
-                size: 22,
+              curve: AppMotion.easeOut,
+              child: AnimatedSwitcher(
+                duration: AppMotion.durationPress,
+                switchInCurve: AppMotion.easeOut,
+                child: Icon(
+                  active ? spec.activeIcon : spec.icon,
+                  key: ValueKey('$active-${spec.label}'),
+                  color: color,
+                  size: 22,
+                ),
               ),
             ),
             const SizedBox(height: 2),
             Text(spec.label,
-                style: latinText(size: 11, weight: active ? FontWeight.w700 : FontWeight.w500, color: color)),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: latinText(
+                    size: 11,
+                    weight: active ? FontWeight.w700 : FontWeight.w500,
+                    color: color)),
           ],
         ),
       ),

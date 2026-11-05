@@ -39,6 +39,29 @@ class _TutorScreenState extends State<TutorScreen> {
   @override
   void initState() {
     super.initState();
+    // Pre-seeded demo conversation: shows exactly how a grounded RAG answer
+    // will look — text, worked example, textbook citation — before the live
+    // endpoint lands.
+    _messages.addAll([
+      TutorMessage(
+        fromStudent: true,
+        text: 'আমি ভগ্নাংশ বুঝি না। Explain fractions again please',
+      ),
+      TutorMessage(
+        fromStudent: false,
+        text:
+            'কোনো সমস্যা নেই! ভগ্নাংশ (fraction) মানে কোনো পূর্ণ জিনিসকে সমান কয়েকটি অংশে ভাগ করে তার কিছু অংশ নেওয়া। যোগ করতে হলে প্রথমে তাদের হর (denominator) একই করে নিতে হয়।',
+        worked: '1/2 + 1/3 = 3/6 + 2/6 = 5/6',
+        citation: 'Textbook · Class VIII Maths · p. 84',
+      ),
+      TutorMessage(fromStudent: true, text: 'Give me practice'),
+      TutorMessage(
+        fromStudent: false,
+        text:
+            'তিনটি অঙ্ক দিচ্ছি — ১) ২/৫ + ১/৫ = ?  ২) ৩/৪ − ১/২ = ?  ৩) ২/৩ × ৬ = ? করে আমাকে দেখাও, আমি মিলিয়ে দেব।',
+        citation: 'Practice set · Fractions · Class VIII',
+      ),
+    ]);
     if (widget.seedTopic == 'covered-today') {
       final data = DemoStore.instance.data;
       final first = data.coverageToday.isNotEmpty ? data.coverageToday.first : null;
@@ -166,7 +189,7 @@ class _TutorScreenState extends State<TutorScreen> {
                       },
                     ),
             ),
-            if (_messages.isNotEmpty) _SuggestionRow(onTap: _send),
+            _SuggestionRow(onTap: _send),
             _Composer(controller: _controller, onSend: _send),
           ],
         ),

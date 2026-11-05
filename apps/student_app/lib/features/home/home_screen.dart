@@ -4,6 +4,8 @@ import '../../data/demo_store.dart';
 import '../../data/models.dart';
 import '../../design/tokens.dart';
 import '../../design/theme.dart';
+import '../../design/subjects.dart';
+import '../../l10n/strings.dart';
 import '../../widgets/common.dart';
 import '../../widgets/pressable.dart';
 import '../syllabus/syllabus_screen.dart';
@@ -18,6 +20,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: languageNotifier,
+      builder: (context, _) => _build(context),
+    );
+  }
+
+  Widget _build(BuildContext context) {
+    final t = T.of(currentLang);
     final data = DemoStore.instance.data;
     final bill = data.currentBill;
     final exam = data.nextExam;
@@ -30,7 +40,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           _Header(student: data.student),
           const SizedBox(height: 20),
-          LargeTitle(title: 'Today', subtitleBn: 'আজ'),
+          LargeTitle(title: t.today, subtitleBn: currentLang == AppLang.en ? 'আজ' : null),
           const SizedBox(height: 16),
           StaggerIn(
             index: 0,
@@ -49,15 +59,15 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SectionHeader(
-                    title: "Today's classes · আজকের ক্লাস",
-                    actionLabel: 'See all',
+                    title: currentLang == AppLang.en ? "Today's classes · আজকের ক্লাস" : t.todaysClasses,
+                    actionLabel: t.seeAll,
                     onAction: () => Navigator.of(context).push(
                       MaterialPageRoute(builder: (_) => const SyllabusScreen()),
                     ),
                   ),
                   const SizedBox(height: 14),
                   if (todayPeriods.isEmpty)
-                    Text('No classes today · আজ ক্লাস নেই',
+                    Text(currentLang == AppLang.en ? 'No classes today · আজ ক্লাস নেই' : t.noClasses,
                         style: bnText(size: 15, color: AppColors.inkTertiary))
                   else
                     SizedBox(
@@ -146,28 +156,35 @@ class _AttendanceCard extends StatelessWidget {
             value: pct / 100,
             size: 96,
             stroke: 10,
-            center: Text('$pct%',
-                style: latinText(size: 24, weight: FontWeight.w800, letterSpacing: -0.5)),
+            center: TweenAnimationBuilder<int>(
+              tween: IntTween(begin: 0, end: pct),
+              duration: AppMotion.durationSlow,
+              curve: AppMotion.easeOut,
+              builder: (_, v, _) => Text('$v%',
+                  style: latinText(size: 24, weight: FontWeight.w800, letterSpacing: -0.5)),
+            ),
           ),
           const SizedBox(width: 20),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Attendance · উপস্থিতি', style: bnText(size: 16, weight: FontWeight.w700)),
+                Text(currentLang == AppLang.en ? 'Attendance · উপস্থিতি' : 'উপস্থিতি', style: bnText(size: 16, weight: FontWeight.w700)),
                 const SizedBox(height: 2),
-                Text('This term · এই শিক্ষাবর্ষ',
+                Text(currentLang == AppLang.en ? 'This term · এই শিক্ষাবর্ষ' : 'এই শিক্ষাবর্ষ',
                     style: bnText(size: 14, color: AppColors.inkSecondary)),
                 const SizedBox(height: 10),
                 if (absences > 0)
                   TintPill(
-                    label: '$absences days missed · $absences দিন অনুপস্থিত',
+                    label: currentLang == AppLang.en
+                        ? '$absences days missed'
+                        : T.of(currentLang).daysMissed(absences),
                     background: AppColors.orangeTint,
                     foreground: AppColors.orangeStrong,
                   )
                 else
                   TintPill(
-                    label: 'Perfect · চমৎকার',
+                    label: currentLang == AppLang.en ? 'Perfect · চমৎকার' : T.of(currentLang).perfect,
                     background: AppColors.greenTint,
                     foreground: AppColors.greenText,
                   ),
@@ -212,17 +229,17 @@ class _FeesExamCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Fees · ফি', style: bnText(size: 14, color: AppColors.inkSecondary)),
+                  Text(currentLang == AppLang.en ? 'Fees · ফি' : 'ফি', style: bnText(size: 14, color: AppColors.inkSecondary)),
                   const SizedBox(height: 8),
                   TintPill(
-                    label: paid ? 'Paid ✓ · পরিশোধিত' : 'Due · বকেয়া',
+                    label: currentLang == AppLang.en ? (paid ? 'Paid ✓ · পরিশোধিত' : 'Due · বকেয়া') : (paid ? 'পরিশোধিত ✓' : 'বকেয়া'),
                     background: paid ? AppColors.greenTint : AppColors.orangeTint,
                     foreground: paid ? AppColors.greenText : AppColors.orangeStrong,
                   ),
                   const SizedBox(height: 8),
                   Text(_amount, style: latinText(size: 22, weight: FontWeight.w800)),
                   if (!paid && bill != null)
-                    Text('by ${bill!.dueDate}', style: latinText(size: 13, color: AppColors.inkTertiary)),
+                    Text('${T.of(currentLang).by} ${bill!.dueDate}', style: latinText(size: 13, color: AppColors.inkTertiary)),
                 ],
               ),
             ),
@@ -231,10 +248,12 @@ class _FeesExamCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Next exam · পরীক্ষা', style: bnText(size: 14, color: AppColors.inkSecondary)),
+                  Text(currentLang == AppLang.en ? 'Next exam · পরীক্ষা' : 'পরীক্ষা', style: bnText(size: 14, color: AppColors.inkSecondary)),
                   const SizedBox(height: 8),
                   TintPill(
-                    label: _daysToExam > 0 ? '$_daysToExam days' : 'Now · চলছে',
+                    label: _daysToExam > 0
+                        ? (currentLang == AppLang.en ? '$_daysToExam days' : T.of(currentLang).daysToExam(_daysToExam))
+                        : (currentLang == AppLang.en ? 'Now' : T.of(currentLang).examNow),
                     background: AppColors.blueTint,
                     foreground: AppColors.blue,
                   ),
@@ -259,6 +278,7 @@ class _ClassChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final sc = subjectColors(period.subjectId);
     return Container(
       width: 128,
       padding: const EdgeInsets.all(12),
@@ -274,13 +294,13 @@ class _ClassChip extends StatelessWidget {
             width: 36,
             height: 36,
             decoration: BoxDecoration(
-              color: AppColors.blueTint,
+              color: sc.tint,
               borderRadius: BorderRadius.circular(AppRadius.md),
             ),
-            child: const Icon(Icons.menu_book_outlined, color: AppColors.blue, size: 20),
+            child: Icon(subjectIcon(period.subjectId), color: sc.strong, size: 20),
           ),
           const Spacer(),
-          Text(period.subjectEn,
+          Text(subjectTitle(period),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: latinText(size: 14, weight: FontWeight.w700)),
